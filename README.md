@@ -126,3 +126,70 @@ public class test {
 </details>
 
 --------------------------------------------------------------------------------------------------------------------------------------
+## :brain: PRATİK 3 - Hipotenüs Bulma
+
+### :question: SORU 
+Java ile kullanıcıdan dik kenarlarının uzunluğunu alan ve hipotenüsü hesaplayan programı yazın.
+
+:warning: Üç kenar uzunluğunu kullanıcıdan aldığınız üçgenin alanını hesaplayan programı yazınız.
+
+:pill: Formül
+Üç𝑔𝑒𝑛𝑖𝑛 ç𝑒𝑣𝑟𝑒𝑠𝑖 = 2𝑢
+𝑢 = (a+b+c) / 2
+Alan * Alan = 𝑢 * (𝑢 − 𝑎)* (𝑢 − 𝑏) * (𝑢 − 𝑐)
+
+### :green_square: CEVAP
+
+<details>
+<summary>Kodu görmek için tıklayınız.</summary>
+
+```java
+import java.util.Scanner;
+
+public class test {
+    public static void main(String[] args) {
+
+        //Değişkenleri oluşturalım.
+        int a,b;
+        double c;
+
+        //Kullanıcıdan verilerimizi alalım
+        Scanner input = new Scanner(System.in);
+        System.out.print("Birinci kenarı giriniz: ");
+        a=input.nextInt();
+        System.out.print("İkinci kenarı giriniz: ");
+        b=input.nextInt();
+
+        //Hipotenüs hesaplayalım.
+        c=Math.sqrt((a*a)+(b*b));
+
+        //Sonuçları ekrana yazalım.
+        System.out.println("Hipotenüs: "+c);
+
+        //--------------------------------------------------------
+        //Ödev olarak verilen kısım.
+        //Değişkenleri oluşturalım.
+        double alan, u;
+
+        //Kullanıcıdan 3 kenar uzunluğu alalım.
+        System.out.println("Bir üçgenin alanının hesaplanması.");
+        System.out.print("Üçgenin 1. kenarını giriniz: ");
+        a=input.nextInt();
+        System.out.print("Üçgenin 2. kenarını giriniz: ");
+        b=input.nextInt();
+        System.out.print("Üçgenin 3. kenarını giriniz: ");
+        c=input.nextInt();
+
+        //Hesaplamaları yapalım
+        u=(a+b+c)/2;
+        alan= Math.sqrt(u* (u-a) * (u-b) * (u-c));
+
+        //Sonucu ekrana yazdıralım.
+        System.out.println("Girdiğiniz kenar değerlerine göre alan: " + alan);
+    }
+}
+
+```
+</details>
+
+--------------------------------------------------------------------------------------------------------------------------------------
