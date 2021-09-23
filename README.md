@@ -10,57 +10,55 @@ Bu README dosyasında bu eğitimdeki pratik ve ödevlerin cevaplarını bulacaks
 |-----|-----|
 |[PRATİK 1](https://github.com/osmantuysuz/Java101_PatikaDev#brain-prati̇k-1---not-ortalaması) - Not Ortalaması|[ÖDEV 1]() - Vücut Kitle Endeksi Hesaplama|
 
-|[PRATİK 2](https://github.com/osmantuysuz/Java101_PatikaDev#brain-prati̇k-2---kdv-hesaplama)|[ÖDEV 2]()|
+|[PRATİK 2](https://github.com/osmantuysuz/Java101_PatikaDev#brain-prati̇k-2---kdv-hesaplama) - Kdv Hesaplama|[ÖDEV 2]() - Manav Kasa|
 
-|[PRATİK 3]()|[ÖDEV 3]()|
+|[PRATİK 3]() - Hipotenüs Bulma|[ÖDEV 3]() - Uçak Bileti Fiyatı Hesaplama|
 
-|[PRATİK 4]()|[ÖDEV 4]()|
+|[PRATİK 4]() - Taksimetre|[ÖDEV 4]() - Çin Zodyağı Hesaplama|
 
-|[PRATİK 5]()|[ÖDEV 5]()|
+|[PRATİK 5]() - Daire & Alan & Çevre|[ÖDEV 5]() - Artık Yıl Hesaplama|
 
-|[PRATİK 6]()|[ÖDEV 6]()|
+|[PRATİK 6]() - Hesap Makinesi|[ÖDEV 6]() - Girilen Sayılardan Min ve Max Değerli Bulan Program|
 
-|[PRATİK 7]()|[ÖDEV 7]()|
+|[PRATİK 7]() - Kullanıcı Girişi|[ÖDEV 7]() - Mükemmel Sayı Bulan Program|
 
-|[PRATİK 8]()|[ÖDEV 8]()|
+|[PRATİK 8]() - Sınıfı Geçme Durumu|[ÖDEV 8]() - Ters Üçgen Yapımı|
 
-|[PRATİK 9]()|[ÖDEV 9]()|
+|[PRATİK 9]() - Hava Sıcaklığına Göre Etkinlik Önerme|[ÖDEV 9]() -  1-100 Arasındaki Asal Sayıları Bulan Program|
 
-|[PRATİK 10]()|[ÖDEV 10]()|
+|[PRATİK 10]() - Sayıları Büyükten Küçüğe Sıralayan Program|[ÖDEV 10]() - Fibonacci Serisi|
 
-|[PRATİK 11]()|[ÖDEV 11]()|
+|[PRATİK 11]() - Burç Bulan Program|[ÖDEV 11]() - Üs Hesabı Yapan Program (Recursive Metot)|
 
-|[PRATİK 12]()|[ÖDEV 12]()|
+|[PRATİK 12]() - Girilen Sayılardan Çift Sayıları Bulan Program|[ÖDEV 12]() - Asal Sayı Bulan Program (Recursive Metot)|
 
-|[PRATİK 13]()|[ÖDEV 13]()|
+|[PRATİK 13]() - Tek Sayıların Toplamını Bulan Program|[ÖDEV 13]() - Desene Göre Metot Oluşturma (Recursive Metot)|
 
-|[PRATİK 14]()|
+|[PRATİK 14]() - Girilen Sayıdan Küçük 2'nin Kuvvetlerini Bulan Program|
 
-|[PRATİK 15]()|
+|[PRATİK 15]() - Faktöriyel Hesaplayan Program|
 
-|[PRATİK 16]()|
+|[PRATİK 16]() - Üslü Sayı Hesaplayan Program|
 
-|[PRATİK 17]()|
+|[PRATİK 17]() - Armstrong Sayıları Bulan Program|
 
-|[PRATİK 18]()|
+|[PRATİK 18]() - Harmonik Sayıları Bulan Program|
 
-|[PRATİK 19]()|
+|[PRATİK 19]() - Yıldız ile Üçgen Yapımı|
 
-|[PRATİK 20]()|
+|[PRATİK 20]() - ATM Projesi|
 
-|[PRATİK 21]()|
+|[PRATİK 21]() - EBOB ve EKOK Bulan Program|
 
-|[PRATİK 22]()|
+|[PRATİK 22]() - Palindrom Sayılar|
 
-|[PRATİK 23]()|
+|[PRATİK 23]() - Recursive ile Fibonacci Serisi|
 
-|[PRATİK 24]()|
+|[PRATİK 24]() - Gelişmiş Hesap Makinesi|
 
-|[PRATİK 25]()|
+|[PRATİK 25]() - Öğrenci Bilgi Sistemi|
 
-|[PRATİK 26]()|
-
-|[PRATİK 27]()|
+|[PRATİK 26]() - Boks Oyunu|
 
 --------------------------------------------------------------------------------------------------------------------------------------
 
