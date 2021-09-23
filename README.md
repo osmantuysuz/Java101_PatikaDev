@@ -61,3 +61,11 @@ Bu README dosyasında bu eğitimdeki pratik ve ödevlerin cevaplarını bulacaks
 |[PRATİK 26]()|
 
 |[PRATİK 27]()|
+
+--------------------------------------------------------------------------------------------------------------------------------------
+
+## :brain: PRATİK 1 - Not Ortalaması
+
+### :question: Soru 
+Java dili ile 'Not Ortalaması Hesaplama' adında program yazalım. İçerisinde Matematik, Fizik, Kimya, Biyoloji, Türkçe ve Tarih dersleri olan öğrencinin aldığı notları girmesi sağlayarak derslerin not ortalamasını ona söyleyelim. Eğer öğrencinin ortalaması 60'tan büyük ise ona 'Başarılı' değil ise 'Başarısız' cevabı verelim.
+
