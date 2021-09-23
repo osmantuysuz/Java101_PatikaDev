@@ -77,8 +77,6 @@ Java dili ile 'Not Ortalaması Hesaplama' adında program yazalım. İçerisinde
 <summary>Kodu görmek için tıklayınız.</summary>
 
 ```java
-import org.w3c.dom.ls.LSOutput;
-
 import java.util.Scanner;
 
 public class test {
@@ -87,6 +85,7 @@ public class test {
         int matematik, fizik, kimya, biyoloji, turkce, tarih;
         int toplam;
         double sonuc;
+        boolean kosul
 
         //Kullanıcıdan değerleri al.
         Scanner input = new Scanner(System.in);
@@ -106,10 +105,52 @@ public class test {
 
 
         //Ekstra koşul ile uygulamamızı yazarsak.
-        boolean kosul = sonuc>=60;
+        kosul = sonuc>=60;
         System.out.println("Durum: " + (kosul==true ? "Başarılı" : "Başarısız"));
     }
 }
+```
+</details>
+
+--------------------------------------------------------------------------------------------------------------------------------------
+
+## :brain: PRATİK 2 - Kdv Hesaplama
+
+### :question: SORU 
+Java ile kullanıcıdan alınan para değerinin KDV'li fiyatını ve KDV tutarını hesaplayıp ekrana bastıran programı yazın.
+
+:warning: Eğer girilen tutar 0 ve 1000 TL arasında ise KDV oranı %18 , tutar 1000 TL'den büyük ise KDV oranını %8 olarak KDV tutarı hesaplayan programı yazınız.
+
+### :green_square: CEVAP
+
+<details>
+<summary>Kodu görmek için tıklayınız.</summary>
+
+```java
+import java.util.Scanner;
+
+public class test {
+    public static void main(String[] args) {
+
+        //Değişkenleri oluşturalım.
+        double tutar, kdvliTutar, fark, kdvTutar1=0.18, kdvTutar2=0.08;
+        boolean kosul1;
+
+        //Kullanıcıdan Kdv hesaplanacak miktarı isteyelim
+        Scanner input=new Scanner(System.in);
+        System.out.print("Lütfen Kdv hesaplanacak miktarı girin: ");
+        tutar=input.nextDouble();
+
+        //Koşullarımızı yazalım.
+        kosul1=tutar>1000;
+
+        //Sonuçları ekrana yazdıralım
+        System.out.println("KDV oranı: "+ (kosul1==true ? kdvTutar2 : kdvTutar1));
+        System.out.println("KDV Tutarı: " + (kosul1==true ? tutar*kdvTutar2 : tutar*kdvTutar1));
+        System.out.println("KDV'li Tutar: " + (kosul1==true ? tutar+(tutar*kdvTutar2) : tutar+(tutar*kdvTutar1)));
+    }
+}
+
 ```
 </details>
 
