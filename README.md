@@ -134,7 +134,9 @@ Java ile kullanıcıdan dik kenarlarının uzunluğunu alan ve hipotenüsü hesa
 :warning: Üç kenar uzunluğunu kullanıcıdan aldığınız üçgenin alanını hesaplayan programı yazınız.
 
 :pill: Formül Üçgenin çevresi = 2u
+
 :pill: Formül u = (a+b+c)/2
+
 :pill: Formül Alan * Alan = u* (u-a) * (u-b) * (u-c)
 
 ### :green_square: CEVAP
@@ -185,6 +187,54 @@ public class test {
 
         //Sonucu ekrana yazdıralım.
         System.out.println("Girdiğiniz kenar değerlerine göre alan: " + alan);
+    }
+}
+
+```
+</details>
+
+--------------------------------------------------------------------------------------------------------------------------------------
+## :brain: PRATİK 4 - Taksimetre
+
+### :question: SORU 
+Java ile gidilen mesafeye (KM) göre taksimetre tutarını ekrana yazdıran programı yazın.
+
+:warning: Şartlar
+
+:pill: Taksimetre KM başına 2.20 TL tutmaktadır.
+
+:pill: Minimum ödenecek tutar 20 TL'dir. 20 TL altında ki ücretlerde yine 20 TL alınacaktır.
+
+:pill: Taksimetre açılış ücreti 10 TL'dir.
+
+
+### :green_square: CEVAP
+
+<details>
+<summary>Kodu görmek için tıklayınız.</summary>
+
+```java
+import java.util.Scanner;
+
+public class test {
+    public static void main(String[] args) {
+
+        //Değişkenleri oluşturalım.
+        double gidilecekKm, kmBasinaTutar=2.20, acilisUcret=10, odenecekTutar;
+
+        boolean kosul1;
+
+        //Kullanıcıdan verilerimizi alalım
+        Scanner input = new Scanner(System.in);
+        System.out.print("Kaç Km yol gideceksiniz: ");
+        gidilecekKm=input.nextInt();
+
+
+        //Taksimetre tutarı hesaplayalım.
+        kosul1=gidilecekKm>20;
+
+        //Sonuçları ekrana yazalım.
+        System.out.println("Taksimetre Tutar: " + ((kosul1) ? 10+(gidilecekKm*kmBasinaTutar) : 20));
     }
 }
 
