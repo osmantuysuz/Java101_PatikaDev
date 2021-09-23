@@ -9,7 +9,7 @@ Bu README dosyasında bu eğitimdeki pratik ve ödevlerin cevaplarını bulacaks
 |-----|-----|
 | [PRATİK 1](https://github.com/osmantuysuz/Java101_PatikaDev#brain-prati̇k-1---not-ortalaması) - Not Ortalaması | [ÖDEV 1]() - Vücut Kitle Endeksi Hesaplama |
 | [PRATİK 2](https://github.com/osmantuysuz/Java101_PatikaDev#brain-prati̇k-2---kdv-hesaplama) - Kdv Hesaplama | [ÖDEV 2]() - Manav Kasa |
-| [PRATİK 3]() - Hipotenüs Bulma | [ÖDEV 3]() - Uçak Bileti Fiyatı Hesaplama |
+| [PRATİK 3](https://github.com/osmantuysuz/Java101_PatikaDev#brain-prati̇k-3---hipotenüs-bulma) - Hipotenüs Bulma | [ÖDEV 3]() - Uçak Bileti Fiyatı Hesaplama |
 | [PRATİK 4]() - Taksimetre | [ÖDEV 4]() - Çin Zodyağı Hesaplama |
 | [PRATİK 5]() - Daire & Alan & Çevre | [ÖDEV 5]() - Artık Yıl Hesaplama |
 | [PRATİK 6]() - Hesap Makinesi | [ÖDEV 6]() - Girilen Sayılardan Min ve Max Değerli Bulan Program |
@@ -133,10 +133,9 @@ Java ile kullanıcıdan dik kenarlarının uzunluğunu alan ve hipotenüsü hesa
 
 :warning: Üç kenar uzunluğunu kullanıcıdan aldığınız üçgenin alanını hesaplayan programı yazınız.
 
-:pill: Formül
-Üç𝑔𝑒𝑛𝑖𝑛 ç𝑒𝑣𝑟𝑒𝑠𝑖 = 2𝑢
-𝑢 = (a+b+c) / 2
-Alan * Alan = 𝑢 * (𝑢 − 𝑎)* (𝑢 − 𝑏) * (𝑢 − 𝑐)
+:pill: Formül Üçgenin çevresi = 2u
+:pill: Formül u = (a+b+c)/2
+:pill: Formül Alan * Alan = u* (u-a) * (u-b) * (u-c)
 
 ### :green_square: CEVAP
 
@@ -182,7 +181,7 @@ public class test {
 
         //Hesaplamaları yapalım
         u=(a+b+c)/2;
-        alan= Math.sqrt(u* (u-a) * (u-b) * (u-c));
+        alan = Math.sqrt(u* (u-a) * (u-b) * (u-c));
 
         //Sonucu ekrana yazdıralım.
         System.out.println("Girdiğiniz kenar değerlerine göre alan: " + alan);
