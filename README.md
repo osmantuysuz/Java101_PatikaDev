@@ -8,9 +8,9 @@ Bu README dosyasında bu eğitimdeki pratik ve ödevlerin cevaplarını bulacaks
 
 | PRATİK | ÖDEV |
 |-----|-----|
-|[PRATİK 1]() - Not Ortalaması|[ÖDEV 1]() - Vücut Kitle Endeksi Hesaplama|
+|[PRATİK 1](https://github.com/osmantuysuz/Java101_PatikaDev#brain-prati̇k-1---not-ortalaması) - Not Ortalaması|[ÖDEV 1]() - Vücut Kitle Endeksi Hesaplama|
 
-|[PRATİK 2]()|[ÖDEV 2]()|
+|[PRATİK 2](https://github.com/osmantuysuz/Java101_PatikaDev#brain-prati̇k-2---kdv-hesaplama)|[ÖDEV 2]()|
 
 |[PRATİK 3]()|[ÖDEV 3]()|
 
