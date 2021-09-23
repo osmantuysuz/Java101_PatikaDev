@@ -66,6 +66,51 @@ Bu README dosyasında bu eğitimdeki pratik ve ödevlerin cevaplarını bulacaks
 
 ## :brain: PRATİK 1 - Not Ortalaması
 
-### :question: Soru 
-Java dili ile 'Not Ortalaması Hesaplama' adında program yazalım. İçerisinde Matematik, Fizik, Kimya, Biyoloji, Türkçe ve Tarih dersleri olan öğrencinin aldığı notları girmesi sağlayarak derslerin not ortalamasını ona söyleyelim. Eğer öğrencinin ortalaması 60'tan büyük ise ona 'Başarılı' değil ise 'Başarısız' cevabı verelim.
+### :question: SORU 
+Java dili ile 'Not Ortalaması Hesaplama' adında program yazalım. İçerisinde Matematik, Fizik, Kimya, Biyoloji, Türkçe ve Tarih dersleri olan öğrencinin aldığı notları girmesi sağlayarak derslerin not ortalamasını ona söyleyelim. 
 
+:warning: İf-Else kullanmadan sadece koşullu ifadeler ileortalaması 60'tan büyük ise ona 'Başarılı' değil ise 'Başarısız' cevabı verelim.
+
+### :green_square: CEVAP
+
+<details>
+<summary>Kodu görmek için tıklayınız.</summary>
+
+```java
+import org.w3c.dom.ls.LSOutput;
+
+import java.util.Scanner;
+
+public class test {
+    public static void main(String[] args) {
+        //Değişkenleri oluştur.
+        int matematik, fizik, kimya, biyoloji, turkce, tarih;
+        int toplam;
+        double sonuc;
+
+        //Kullanıcıdan değerleri al.
+        Scanner input = new Scanner(System.in);
+        System.out.print("Matematik puanınızı giriniz: ");matematik=input.nextInt();
+        System.out.print("Fizik puanınızı giriniz: ");fizik=input.nextInt();
+        System.out.print("Kimya puanınızı giriniz: ");kimya=input.nextInt();
+        System.out.print("Biyoloji puanınızı giriniz: ");biyoloji=input.nextInt();
+        System.out.print("Türkçe puanınızı giriniz: ");turkce=input.nextInt();
+        System.out.print("Tarih puanınızı giriniz: ");tarih=input.nextInt();
+
+        //Hesaplamaları yap
+        toplam=(matematik + fizik + kimya + biyoloji + turkce + tarih);
+        sonuc=toplam/6;
+
+        //Ekrana çıktıları yazdır
+        System.out.println("Ders ortalamanız: " + sonuc);
+
+
+        //Ekstra koşul ile uygulamamızı yazarsak.
+        boolean kosul = sonuc>=60;
+        System.out.println("Durum: " + (kosul==true ? "Başarılı" : "Başarısız"));
+    }
+}
+```
+</details>
+
+--------------------------------------------------------------------------------------------------------------------------------------
