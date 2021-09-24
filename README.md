@@ -509,6 +509,64 @@ public class test {
 </details>
 
 --------------------------------------------------------------------------------------------------------------------------------------
+## :brain: PRATİK 9 -  Hava Sıcaklığına Göre Etkinlik Önerme
+
+### :question: SORU 
+Java koşullu ifadeler ile hava sıcaklığına göre etkinlik öneren program yapımı.
+
+:warning: Koşullar
+- Sıcaklık 5'dan küçük ise "Kayak" yapmayı öner.
+- Sıcaklık 5 ve 15 arasında ise "Sinema" etkinliğini öner.
+- Sıcaklık 15 ve 25 arasında ise "Piknik" etkinliğini öner.
+- Sıcaklık 25'ten büyük ise "Yüzme" etkinliğini öner.
+
+:warning: Aynı örnek üzerinden if koşulları başka hangi şekilde oluşturulabilirdi farklı çözüm yolları bulunuz.
+
+### :green_square: CEVAP
+
+<details>
+<summary>Kodu görmek için tıklayınız.</summary>
+
+```java
+import java.util.Scanner;
+
+public class test {
+    public static void main(String[] args) {
+
+        //Değişken tanımlamaları
+        double havaSıcakligi;
+
+        // Kullanıcıdan hava durumunu isteyelim.
+        Scanner input = new Scanner(System.in);
+        System.out.print("Lütfen hava durumunu giriniz: ");
+        havaSıcakligi=input.nextDouble();
+
+        // Alınan hava sıcaklığına göre etkinlik önerisi yapalım.
+        if (havaSıcakligi<5){
+            System.out.println("Kayak yapabilirsiniz.");
+        }else if (havaSıcakligi>=5 && havaSıcakligi<15){
+            System.out.println("Sinemaya gidebilirsiniz.");
+        }else if (havaSıcakligi>=15 && havaSıcakligi<25){
+            System.out.println("Pikniğe gidebilirsiniz.");
+        }else if (havaSıcakligi>=25) {
+            System.out.println("Yüzmeye gidebilirsiniz.");
+        }
+
+
+        //Programda belirtilen uyarıya göre if koşulları olmadan çözmeye çalışalım.
+        boolean kosul1=havaSıcakligi<5, kosul2=havaSıcakligi>=5 && havaSıcakligi<15, kosul3=havaSıcakligi>=15 && havaSıcakligi<25;
+        String sonuc;
+
+        //Koşulları kontrol etme
+        sonuc = kosul1 ? "Kayak yapabilirsiniz." : kosul2 ? "Sinemaya Gidebilirsiniz" : kosul3 ? "Pikniğe gidebilirsiniz." : "Yüzmeye gidebilirsiniz.";
+
+        //Sonucu ekrana yazdıralım.
+        System.out.println(sonuc);
+    }
+}
+```
+</details>
+--------------------------------------------------------------------------------------------------------------------------------------
 ## :brain: ÖDEV 1 - Vücut Kitle İndeksi Hesaplama
 
 ### :question: SORU 
