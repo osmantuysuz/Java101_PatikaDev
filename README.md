@@ -367,6 +367,75 @@ public class test {
 </details>
 
 --------------------------------------------------------------------------------------------------------------------------------------
+## :brain: PRATİK 7 - Kullanıcı Girişi
+
+### :question: SORU 
+Java koşullu ifadeler ile kullanıcı adı ve şifreyi kontrol eden program yapımı.
+
+:warning: Eğer şifre yanlış ise kullanıcıya şifresini sıfırlayıp sıfırlamayacağını sorun, eğer kullanıcı sıfırlamak isterse yeni girdiği şifrenin hatalı girdiği ve unuttuğu şifre ile aynı olmaması gerektiğini kontrol edip , şifreler aynı ise ekrana "Şifre oluşturulamadı, lütfen başka şifre giriniz." sorun yoksa "Şifre oluşturuldu" yazan programı yazınız.
+
+### :green_square: CEVAP
+
+<details>
+<summary>Kodu görmek için tıklayınız.</summary>
+
+```java
+import java.util.Scanner;
+
+public class test {
+    public static void main(String[] args) {
+
+        //Değişken tanımlamaları
+        String userName, passWord;
+        char sifreCevap;
+
+        Scanner input = new Scanner(System.in);
+
+        // Kullanıcıdan username ve password girişinin istenmesi
+        System.out.print("Lütfen kullanıcı adınızı giriniz: ");
+        userName = input.nextLine();
+
+        System.out.print("Lütfen şifrenizi giriniz: ");
+        passWord = input.nextLine();
+
+        // Alınan bilgilerin kontrolü ve hatalı işlem cevapları
+        if (userName.equals("patika")) {
+            if (passWord.equals("dev")) {
+                System.out.println("Sisteme başarılı bir şekilde giriş yaptınız.");
+            } else {
+                System.out.println("Hatalı şifre girişi !!!");
+                System.out.print("Şifrenizi sıfırlamak ister misiniz? E/H : ");
+                sifreCevap = input.next().charAt(0);
+
+                if (sifreCevap == 'E') {
+
+                    System.out.print("Lütfen yeni şifrenizi giriniz: ");
+                    // Eğer String newPassword = input.nextline(); olarak yazılmış olsaydı sistem bu kodu atlayacaktı.
+                    // Bu nedenle input.next(); olarak değer aldırıldı.
+                    String newPassword = input.next();
+
+                    if (newPassword.equals(passWord) || newPassword.equals("dev")) {
+                        System.out.print("Şifre oluşturulamadı");
+                    } else {
+                        System.out.print("Şifre oluşturuldu.");
+                    }
+                } else if (sifreCevap == 'H') {
+                    System.out.print("Şifre oluşturma işlemi iptal edildi..");
+
+                } else {
+                    System.out.print("Lütfen geçerli bir parametre giriniz. E (Evet) veya H (Hayır) !!!");
+                }
+            }
+        } else {
+            System.out.println("Hatalı kullanıcı adı girişi !!!");
+        }
+    }
+}
+
+```
+</details>
+
+--------------------------------------------------------------------------------------------------------------------------------------
 ## :brain: ÖDEV 1 - Vücut Kitle İndeksi Hesaplama
 
 ### :question: SORU 
