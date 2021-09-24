@@ -13,7 +13,7 @@ Bu README dosyasında bu eğitimdeki pratik ve ödevlerin cevaplarını bulacaks
 | [PRATİK 4](https://github.com/osmantuysuz/Java101_PatikaDev#brain-prati̇k-4---taksimetre) - Taksimetre | [ÖDEV 4]() - Çin Zodyağı Hesaplama |
 | [PRATİK 5](https://github.com/osmantuysuz/Java101_PatikaDev#brain-prati̇k-5---daire--alan--çevre) - Daire & Alan & Çevre | [ÖDEV 5]() - Artık Yıl Hesaplama |
 | [PRATİK 6](https://github.com/osmantuysuz/Java101_PatikaDev#brain-prati̇k-6---hesap-makinesi) - Hesap Makinesi | [ÖDEV 6]() - Girilen Sayılardan Min ve Max Değerli Bulan Program |
-| [PRATİK 7]() - Kullanıcı Girişi | [ÖDEV 7]() - Mükemmel Sayı Bulan Program |
+| [PRATİK 7](https://github.com/osmantuysuz/Java101_PatikaDev#brain-prati̇k-7---kullanıcı-girişi) - Kullanıcı Girişi | [ÖDEV 7]() - Mükemmel Sayı Bulan Program |
 | [PRATİK 8]() - Sınıfı Geçme Durumu | [ÖDEV 8]() - Ters Üçgen Yapımı |
 | [PRATİK 9]() - Hava Sıcaklığına Göre Etkinlik Önerme | [ÖDEV 9]() -  1-100 Arasındaki Asal Sayıları Bulan Program |
 | [PRATİK 10]() - Sayıları Büyükten Küçüğe Sıralayan Program | [ÖDEV 10]() - Fibonacci Serisi |
