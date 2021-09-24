@@ -338,3 +338,65 @@ public class test {
 </details>
 
 --------------------------------------------------------------------------------------------------------------------------------------
+## :brain: ÖDEV 2 - Manav Kasa
+
+### :question: SORU 
+Java ile kullanıcıların manavdan almış oldukları ürünlerin kilogram değerlerine göre toplam tutarını ekrana yazdıran programı yazın.
+
+:pushpin: Meyveler ve KG Fiyatları
+- Armut: 2,14 TL
+- Elma: 3,67 TL
+- Domates: 1,11 TL
+- Muz: 0,95 TL
+- Patlıcan: 5,00 TL
+
+:heavy_check_mark: Örnek Çıktı
+```
+Armut Kaç Kilo ? :0
+Elma Kaç Kilo ? :1
+Domates Kaç Kilo ? :1
+Muz Kaç Kilo ? :2
+Patlıcan Kaç Kilo ? :3
+Toplam Tutar : 21.68 TL
+```
+
+
+### :green_square: CEVAP
+
+<details>
+<summary>Kodu görmek için tıklayınız.</summary>
+
+```java
+import java.util.Scanner;
+
+public class test {
+    public static void main(String[] args) {
+
+        //Değişkenleri oluşturalım.
+        double  armutKG=2.14, elmaKG=3.67, domatesKG=1.11, muzKG=0.95, patlicanKG=5.00, tutar, armut, elma, domates ,muz ,patlican;
+
+        //Kullanıcıdan verilerimizi alalım
+        Scanner input = new Scanner(System.in);
+        System.out.print("Armut Kaç Kilo?: ");
+        armut=input.nextDouble();
+        System.out.print("Elma Kaç Kilo?: ");
+        elma=input.nextDouble();
+        System.out.print("Domates Kaç Kilo?: ");
+        domates=input.nextDouble();
+        System.out.print("Muz Kaç Kilo?: ");
+        muz=input.nextDouble();
+        System.out.print("Patlıcan Kaç Kilo?: ");
+        patlican=input.nextDouble();
+
+        //Hesaplamaları yapalım.
+        tutar=(armut*armutKG)+(elma*elmaKG)+(domates*domatesKG)+(muz*muzKG)+(patlican*patlicanKG);
+
+        //Sonuçları ekrana yazalım.
+        System.out.println("Toplam Tutar: " + tutar);
+    }
+}
+
+```
+</details>
+
+--------------------------------------------------------------------------------------------------------------------------------------
