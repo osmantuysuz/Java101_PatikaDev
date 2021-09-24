@@ -9,7 +9,7 @@ Bu README dosyasında bu eğitimdeki pratik ve ödevlerin cevaplarını bulacaks
 |-----|-----|
 | [PRATİK 1](https://github.com/osmantuysuz/Java101_PatikaDev#brain-prati̇k-1---not-ortalaması) - Not Ortalaması | [ÖDEV 1](https://github.com/osmantuysuz/Java101_PatikaDev#brain-ödev-1---vücut-kitle-i̇ndeksi-hesaplama) - Vücut Kitle Endeksi Hesaplama |
 | [PRATİK 2](https://github.com/osmantuysuz/Java101_PatikaDev#brain-prati̇k-2---kdv-hesaplama) - Kdv Hesaplama | [ÖDEV 2](https://github.com/osmantuysuz/Java101_PatikaDev#brain-ödev-2---manav-kasa) - Manav Kasa |
-| [PRATİK 3](https://github.com/osmantuysuz/Java101_PatikaDev#brain-prati̇k-3---hipotenüs-bulma) - Hipotenüs Bulma | [ÖDEV 3]() - Uçak Bileti Fiyatı Hesaplama |
+| [PRATİK 3](https://github.com/osmantuysuz/Java101_PatikaDev#brain-prati̇k-3---hipotenüs-bulma) - Hipotenüs Bulma | [ÖDEV 3](https://github.com/osmantuysuz/Java101_PatikaDev#brain-ödev-3---uçak-bileti-fiyatı-hesaplama) - Uçak Bileti Fiyatı Hesaplama |
 | [PRATİK 4](https://github.com/osmantuysuz/Java101_PatikaDev#brain-prati̇k-4---taksimetre) - Taksimetre | [ÖDEV 4]() - Çin Zodyağı Hesaplama |
 | [PRATİK 5](https://github.com/osmantuysuz/Java101_PatikaDev#brain-prati̇k-5---daire--alan--çevre) - Daire & Alan & Çevre | [ÖDEV 5]() - Artık Yıl Hesaplama |
 | [PRATİK 6](https://github.com/osmantuysuz/Java101_PatikaDev#brain-prati̇k-6---hesap-makinesi) - Hesap Makinesi | [ÖDEV 6]() - Girilen Sayılardan Min ve Max Değerli Bulan Program |
