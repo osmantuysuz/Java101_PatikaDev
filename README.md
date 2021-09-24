@@ -566,20 +566,14 @@ public class test {
 }
 ```
 </details>
---------------------------------------------------------------------------------------------------------------------------------------
 
+--------------------------------------------------------------------------------------------------------------------------------------
 ## :brain: PRATİK 10 - Sayıları Büyükten Küçüğe Sıralayan Program
 
 ### :question: SORU 
-Java koşullu ifadeler ile hava sıcaklığına göre etkinlik öneren program yapımı.
+Java koşullu ifadeler ile girilen 3 sayıyı büyükten küçüğe sıralayan program yapımı.
 
-:warning: Koşullar
-- Sıcaklık 5'dan küçük ise "Kayak" yapmayı öner.
-- Sıcaklık 5 ve 15 arasında ise "Sinema" etkinliğini öner.
-- Sıcaklık 15 ve 25 arasında ise "Piknik" etkinliğini öner.
-- Sıcaklık 25'ten büyük ise "Yüzme" etkinliğini öner.
-
-:warning: Aynı örnek üzerinden if koşulları başka hangi şekilde oluşturulabilirdi farklı çözüm yolları bulunuz.
+:warning: Girilen 3 sayıyı "küçükten büyüğe" sıralayan programı yazınız.
 
 ### :green_square: CEVAP
 
@@ -587,10 +581,68 @@ Java koşullu ifadeler ile hava sıcaklığına göre etkinlik öneren program y
 <summary>Kodu görmek için tıklayınız.</summary>
 
 ```java
+import java.util.Scanner;
+
+public class test {
+    public static void main(String[] args) {
+
+        //Değişken tanımlamaları
+        int sayi1, sayi2, sayi3;
+
+        // Kullanıcıdan sayıları isteyelim.
+        Scanner input = new Scanner(System.in);
+        System.out.print("1. sayıyı giriniz: ");
+        sayi1=input.nextInt();
+        System.out.print("2. sayıyı giriniz: ");
+        sayi2=input.nextInt();
+        System.out.print("3. sayıyı giriniz: ");
+        sayi3=input.nextInt();
+
+        // Alınan sayıları büyükten küçüğe sıralayıp yazdıralım.
+        System.out.println("Büyükten küçüğe sıralama");
+        if (sayi1>sayi2 && sayi1>sayi3){
+            if (sayi2>sayi3)
+                System.out.println(sayi1 + ">" + sayi2 + ">" + sayi3);
+            else
+                System.out.println(sayi1 + ">" + sayi3 + ">" + sayi2);
+        }else if(sayi2>sayi1 && sayi2>sayi3){
+            if (sayi1>sayi3)
+                System.out.println(sayi2 + ">" + sayi1 + ">" + sayi3);
+            else
+                System.out.println(sayi2 + ">" + sayi3 + ">" + sayi1);
+        }else {
+            if (sayi1>sayi2)
+                System.out.println(sayi3 + ">" + sayi1 + ">" + sayi2);
+            else
+                System.out.println(sayi3 + ">" + sayi2 + ">" + sayi1);
+        }
+
+        //Alınan sayıları küçükten büyüğe sıralayalım
+        System.out.println("Küçükten büyüğe sıralama");
+        if (sayi1<sayi2 && sayi1<sayi3){
+            if (sayi2<sayi3)
+                System.out.println(sayi1 + "<" + sayi2 + "<" + sayi3);
+            else
+                System.out.println(sayi1 + "<" + sayi3 + "<" + sayi2);
+        }else if(sayi2<sayi1 && sayi2<sayi3){
+            if (sayi1<sayi3)
+                System.out.println(sayi2 + "<" + sayi1 + "<" + sayi3);
+            else
+                System.out.println(sayi2 + "<" + sayi3 + "<" + sayi1);
+        }else {
+            if (sayi1<sayi2)
+                System.out.println(sayi3 + "<" + sayi1 + "<" + sayi2);
+            else
+                System.out.println(sayi3 + ">" + sayi2 + ">" + sayi1);
+        }
+    }
+}
+
 
 ```
 </details>
 --------------------------------------------------------------------------------------------------------------------------------------
+
 ## :brain: ÖDEV 1 - Vücut Kitle İndeksi Hesaplama
 
 ### :question: SORU 
