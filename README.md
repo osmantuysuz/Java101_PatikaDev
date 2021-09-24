@@ -11,7 +11,7 @@ Bu README dosyasında bu eğitimdeki pratik ve ödevlerin cevaplarını bulacaks
 | [PRATİK 2](https://github.com/osmantuysuz/Java101_PatikaDev#brain-prati̇k-2---kdv-hesaplama) - Kdv Hesaplama | [ÖDEV 2]() - Manav Kasa |
 | [PRATİK 3](https://github.com/osmantuysuz/Java101_PatikaDev#brain-prati̇k-3---hipotenüs-bulma) - Hipotenüs Bulma | [ÖDEV 3]() - Uçak Bileti Fiyatı Hesaplama |
 | [PRATİK 4](https://github.com/osmantuysuz/Java101_PatikaDev#brain-prati̇k-4---taksimetre) - Taksimetre | [ÖDEV 4]() - Çin Zodyağı Hesaplama |
-| [PRATİK 5]() - Daire & Alan & Çevre | [ÖDEV 5]() - Artık Yıl Hesaplama |
+| [PRATİK 5](https://github.com/osmantuysuz/Java101_PatikaDev#brain-prati̇k-5---daire--alan--çevre) - Daire & Alan & Çevre | [ÖDEV 5]() - Artık Yıl Hesaplama |
 | [PRATİK 6]() - Hesap Makinesi | [ÖDEV 6]() - Girilen Sayılardan Min ve Max Değerli Bulan Program |
 | [PRATİK 7]() - Kullanıcı Girişi | [ÖDEV 7]() - Mükemmel Sayı Bulan Program |
 | [PRATİK 8]() - Sınıfı Geçme Durumu | [ÖDEV 8]() - Ters Üçgen Yapımı |
@@ -288,6 +288,33 @@ public class test {
         System.out.println("Daire Dilim Ölçüsü: " + daireDilimi);
     }
 }
+
+```
+</details>
+
+--------------------------------------------------------------------------------------------------------------------------------------
+## :brain: PRATİK 6 - Hesap Makinesi
+
+### :question: SORU 
+Java ile yarı çapını kullanıcıdan aldığınız dairenin alanını ve çevresini hesaplayan programı yazın.
+
+:warning: Yarıçapı r, merkez açısısının ölçüsü 𝛼 olan daire diliminin alanı bulan programı yazınız.
+
+:pill: Alan Formülü : π * r * r;
+
+:pill: Çevre Formülü : 2 * π * r;
+
+:pill: 𝜋 sayısını = 3.14 alınız.
+
+:pill: Formül : (𝜋 * (r*r) * 𝛼) / 360
+
+### :green_square: CEVAP
+
+<details>
+<summary>Kodu görmek için tıklayınız.</summary>
+
+```java
+
 
 ```
 </details>
