@@ -293,6 +293,80 @@ public class test {
 </details>
 
 --------------------------------------------------------------------------------------------------------------------------------------
+## :brain: PRATİK 6 - Hesap Makinesi
+
+### :question: SORU 
+Java koşullu ifadeler ile basit hesap makinesi yapımı.
+
+:warning: Videodaki hesap makinesini switch-case kullanarak yapınız.
+
+### :green_square: CEVAP
+
+<details>
+<summary>Kodu görmek için tıklayınız.</summary>
+
+```java
+import java.util.Scanner;
+
+public class test {
+    public static void main(String[] args) {
+
+        //Değişkenleri oluşturalım.
+        double  sayi1, sayi2, sonuc;
+        char islem;
+
+        //Kullanıcıdan verilerimizi alalım
+        Scanner input = new Scanner(System.in);
+        System.out.print("1. Sayıyı Giriniz: ");
+        sayi1=input.nextDouble();
+        System.out.print("2. Sayıyı Giriniz: ");
+        sayi2=input.nextDouble();
+
+        //Kullanıcıya bilgiler verelim
+        System.out.println("");
+        System.out.println("+ (Toplama)");
+        System.out.println("- (Çıkarma)");
+        System.out.println("* (Çarpma)");
+        System.out.println("/ (Bölme)");
+        System.out.println("Hangi işlemi yapmak istiyorsunuz");
+
+        //Kullanıcıdan yapacağı işlemi alalım
+        islem=input.next().charAt(0);
+
+        //Sonucu ekrana yazdıralım.
+        switch (islem){
+            case '+':
+                sonuc=sayi1+sayi2;
+                System.out.println("Toplama sonucu: " + sonuc);
+                break;
+            case '-':
+                sonuc=sayi1-sayi2;
+                System.out.println("Çıkarma sonucu: " + sonuc);
+                break;
+            case '*':
+                sonuc=sayi1*sayi2;
+                System.out.println("Çarpma sonucu: " + sonuc);
+                break;
+            case '/':
+                if (sayi2==0){
+                    System.out.println("Bir sayı sıfıra bölünemez!");
+                    break;
+                }else {
+                    sonuc=sayi1/sayi2;
+                    System.out.println("Bölme sonucu: " + sonuc);
+                    break;
+                }
+            default:
+                System.out.println("Yanlış bir işlem seçtiniz?");
+                break;
+        }
+    }
+}
+
+```
+</details>
+
+--------------------------------------------------------------------------------------------------------------------------------------
 ## :brain: ÖDEV 1 - Vücut Kitle İndeksi Hesaplama
 
 ### :question: SORU 
