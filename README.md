@@ -293,29 +293,47 @@ public class test {
 </details>
 
 --------------------------------------------------------------------------------------------------------------------------------------
-## :brain: PRATİK 6 - Hesap Makinesi
+## :brain: ÖDEV 1 - Vücut Kitle İndeksi Hesaplama
 
 ### :question: SORU 
-Java ile yarı çapını kullanıcıdan aldığınız dairenin alanını ve çevresini hesaplayan programı yazın.
+Java ile kullanıcıdan boy ve kilo değerlerini alıp bir değişkene atayın. Aşağıda ki formüle göre kullanıcının "Vücut Kitle İndeks" değerini hesaplayıp ekrana yazdırın.
 
-:warning: Yarıçapı r, merkez açısısının ölçüsü 𝛼 olan daire diliminin alanı bulan programı yazınız.
+:warning: Formül Kilo (kg) / Boy(m) * Boy(m)
 
-:pill: Alan Formülü : π * r * r;
-
-:pill: Çevre Formülü : 2 * π * r;
-
-:pill: 𝜋 sayısını = 3.14 alınız.
-
-:pill: Formül : (𝜋 * (r*r) * 𝛼) / 360
-
+:heavy_check_mark: Çıktısı
+```
+Lütfen boyunuzu (metre cinsinde) giriniz : 1,72
+Lütfen kilonuzu giriniz : 105
+Vücut Kitle İndeksiniz : 35.49215792320173
+```
 ### :green_square: CEVAP
 
 <details>
 <summary>Kodu görmek için tıklayınız.</summary>
 
 ```java
+import java.util.Scanner;
 
+public class test {
+    public static void main(String[] args) {
 
+        //Değişkenleri oluşturalım.
+        double  boy, kilo, kitleIndeks;
+
+        //Kullanıcıdan verilerimizi alalım
+        Scanner input = new Scanner(System.in);
+        System.out.print("Boyunuzu (metre cinsinden) Giriniz: ");
+        boy=input.nextDouble();
+        System.out.print("Kilonuzu Giriniz: ");
+        kilo=input.nextDouble();
+
+        //Hesaplamaları yapalım.
+        kitleIndeks=kilo/(boy*boy);
+
+        //Sonuçları ekrana yazalım.
+        System.out.println("Vücut Kitle Endeksiniz: " + kitleIndeks);
+    }
+}
 ```
 </details>
 
