@@ -436,6 +436,79 @@ public class test {
 </details>
 
 --------------------------------------------------------------------------------------------------------------------------------------
+## :brain: PRATİK 8 - Sınıfı Geçme Durumu
+
+### :question: SORU 
+Java koşullu ifadeler ile kullanıcının not durumuna göre sınıfı geçme durumunu hesaplayan program yapımı.
+
+:pill: Dersler: Matematik, Fizik, Türkçe, Kimya, Müzik
+:pill: Geçme Notu: 55
+
+:warning: Eğer girilen ders notları 0 veya 100 arasında değil ise ortalamaya katılmasın.
+
+### :green_square: CEVAP
+
+<details>
+<summary>Kodu görmek için tıklayınız.</summary>
+
+```java
+import java.util.Scanner;
+
+public class test {
+    public static void main(String[] args) {
+
+        //Değişken tanımlamaları
+        int turkce, matematik, fizik, kimya, muzik, ortalama, dersSayisi=5;
+
+
+
+        // Kullanıcıdan ders notlarını isteyelim.
+        Scanner input = new Scanner(System.in);
+        System.out.print("Türkçe: ");
+        turkce = input.nextInt();
+        System.out.print("Matematik: ");
+        matematik = input.nextInt();
+        System.out.print("Fizik: ");
+        fizik = input.nextInt();
+        System.out.print("Kimya: ");
+        kimya = input.nextInt();
+        System.out.print("Müzik: ");
+        muzik = input.nextInt();
+
+
+        // Alınan ders notlarının 0 ile 100 arasında olduğunu kontrol edelim.
+        //0-100 arasında değilse ortalama hesabına katılmayacak
+        if (turkce>100 || turkce<0){
+            dersSayisi--;
+            turkce=0;
+        } if (matematik>100 || matematik<0){
+            dersSayisi--;
+            matematik=0;
+        } if (fizik>100 || fizik<0){
+            dersSayisi--;
+            fizik=0;
+        } if (kimya>100 || kimya<0){
+            dersSayisi--;
+            kimya=0;
+        } if (muzik>100 || muzik<0){
+            dersSayisi--;
+            muzik=0;
+        }
+
+        //Ortalama hesabını yapalım
+        ortalama=(turkce+matematik+fizik+kimya+muzik)/dersSayisi;
+
+        //Sonucu yazdıralım
+        if (ortalama<55)
+            System.out.println("Kaldınız. Ortalamanız: " + ortalama);
+        else if (ortalama>=55 && ortalama<=100)
+            System.out.println("Geçtiniz. Ortalamanız: " + ortalama);
+    }
+}
+```
+</details>
+
+--------------------------------------------------------------------------------------------------------------------------------------
 ## :brain: ÖDEV 1 - Vücut Kitle İndeksi Hesaplama
 
 ### :question: SORU 
