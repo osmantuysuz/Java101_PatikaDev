@@ -10,7 +10,7 @@ Bu README dosyasında bu eğitimdeki pratik ve ödevlerin cevaplarını bulacaks
 | [PRATİK 1](https://github.com/osmantuysuz/Java101_PatikaDev#brain-prati̇k-1---not-ortalaması) - Not Ortalaması | [ÖDEV 1]() - Vücut Kitle Endeksi Hesaplama |
 | [PRATİK 2](https://github.com/osmantuysuz/Java101_PatikaDev#brain-prati̇k-2---kdv-hesaplama) - Kdv Hesaplama | [ÖDEV 2]() - Manav Kasa |
 | [PRATİK 3](https://github.com/osmantuysuz/Java101_PatikaDev#brain-prati̇k-3---hipotenüs-bulma) - Hipotenüs Bulma | [ÖDEV 3]() - Uçak Bileti Fiyatı Hesaplama |
-| [PRATİK 4]() - Taksimetre | [ÖDEV 4]() - Çin Zodyağı Hesaplama |
+| [PRATİK 4](https://github.com/osmantuysuz/Java101_PatikaDev#brain-prati̇k-4---taksimetre) - Taksimetre | [ÖDEV 4]() - Çin Zodyağı Hesaplama |
 | [PRATİK 5]() - Daire & Alan & Çevre | [ÖDEV 5]() - Artık Yıl Hesaplama |
 | [PRATİK 6]() - Hesap Makinesi | [ÖDEV 6]() - Girilen Sayılardan Min ve Max Değerli Bulan Program |
 | [PRATİK 7]() - Kullanıcı Girişi | [ÖDEV 7]() - Mükemmel Sayı Bulan Program |
@@ -84,7 +84,6 @@ public class test {
 </details>
 
 --------------------------------------------------------------------------------------------------------------------------------------
-
 ## :brain: PRATİK 2 - Kdv Hesaplama
 
 ### :question: SORU 
@@ -235,6 +234,58 @@ public class test {
 
         //Sonuçları ekrana yazalım.
         System.out.println("Taksimetre Tutar: " + ((kosul1) ? 10+(gidilecekKm*kmBasinaTutar) : 20));
+    }
+}
+
+```
+</details>
+
+--------------------------------------------------------------------------------------------------------------------------------------
+## :brain: PRATİK 5 - Daire & Alan & Çevre
+
+### :question: SORU 
+Java ile yarı çapını kullanıcıdan aldığınız dairenin alanını ve çevresini hesaplayan programı yazın.
+
+:warning: Yarıçapı r, merkez açısısının ölçüsü 𝛼 olan daire diliminin alanı bulan programı yazınız.
+
+:pill: Alan Formülü : π * r * r;
+
+:pill: Çevre Formülü : 2 * π * r;
+
+:pill: 𝜋 sayısını = 3.14 alınız.
+
+:pill: Formül : (𝜋 * (r*r) * 𝛼) / 360
+
+### :green_square: CEVAP
+
+<details>
+<summary>Kodu görmek için tıklayınız.</summary>
+
+```java
+import java.util.Scanner;
+
+public class test {
+    public static void main(String[] args) {
+
+        //Değişkenleri oluşturalım.
+        double  pi=3.14, yaricap, cevre, alan, merkezAci, daireDilimi;
+
+        //Kullanıcıdan verilerimizi alalım
+        Scanner input = new Scanner(System.in);
+        System.out.print("Yarıçapı giriniz: ");
+        yaricap=input.nextDouble();
+        System.out.print("Merkez açıyı giriniz: ");
+        merkezAci=input.nextDouble();
+
+        //Hesaplamaları yapalım.
+        cevre=2*pi*yaricap;
+        alan=pi*yaricap*yaricap;
+        daireDilimi=((pi*(yaricap*yaricap)*merkezAci)/360);
+
+        //Sonuçları ekrana yazalım.
+        System.out.println("Dairenin Alanı: " + alan);
+        System.out.println("Dairenin Çevresi: " + cevre);
+        System.out.println("Daire Dilim Ölçüsü: " + daireDilimi);
     }
 }
 
