@@ -11,7 +11,7 @@ Bu README dosyasında bu eğitimdeki pratik ve ödevlerin cevaplarını bulacaks
 | [PRATİK 2](https://github.com/osmantuysuz/Java101_PatikaDev#brain-prati̇k-2---kdv-hesaplama) - Kdv Hesaplama | [ÖDEV 2](https://github.com/osmantuysuz/Java101_PatikaDev#brain-ödev-2---manav-kasa) - Manav Kasa |
 | [PRATİK 3](https://github.com/osmantuysuz/Java101_PatikaDev#brain-prati̇k-3---hipotenüs-bulma) - Hipotenüs Bulma | [ÖDEV 3](https://github.com/osmantuysuz/Java101_PatikaDev#brain-ödev-3---uçak-bileti-fiyatı-hesaplama) - Uçak Bileti Fiyatı Hesaplama |
 | [PRATİK 4](https://github.com/osmantuysuz/Java101_PatikaDev#brain-prati̇k-4---taksimetre) - Taksimetre | [ÖDEV 4](https://github.com/osmantuysuz/Java101_PatikaDev#brain-ödev-4---çin-zodyağı-hesaplama) - Çin Zodyağı Hesaplama |
-| [PRATİK 5](https://github.com/osmantuysuz/Java101_PatikaDev#brain-prati̇k-5---daire--alan--çevre) - Daire & Alan & Çevre | [ÖDEV 5]() - Artık Yıl Hesaplama |
+| [PRATİK 5](https://github.com/osmantuysuz/Java101_PatikaDev#brain-prati̇k-5---daire--alan--çevre) - Daire & Alan & Çevre | [ÖDEV 5](https://github.com/osmantuysuz/Java101_PatikaDev#brain-ödev-5---artık-yıl-hesaplama) - Artık Yıl Hesaplama |
 | [PRATİK 6](https://github.com/osmantuysuz/Java101_PatikaDev#brain-prati̇k-6---hesap-makinesi) - Hesap Makinesi | [ÖDEV 6]() - Girilen Sayılardan Min ve Max Değerli Bulan Program |
 | [PRATİK 7](https://github.com/osmantuysuz/Java101_PatikaDev#brain-prati̇k-7---kullanıcı-girişi) - Kullanıcı Girişi | [ÖDEV 7]() - Mükemmel Sayı Bulan Program |
 | [PRATİK 8](https://github.com/osmantuysuz/Java101_PatikaDev#brain-prati̇k-8---sınıfı-geçme-durumu) - Sınıfı Geçme Durumu | [ÖDEV 8]() - Ters Üçgen Yapımı |
@@ -844,11 +844,9 @@ public class test {
 ## :brain: PRATİK 12 - Girilen Sayılardan Çift Sayıları Bulan Program
 
 ### :question: SORU 
+Java döngüler ile kullanıcının girdiği sayıya kadar çift olan sayıları bulan programı yazıyoruz.
 
-
-:pill:
-
-:warning: 
+:warning: Java döngüler ile 0'dan girilen sayıya kadar olan sayılardan 3 ve 4'e tam bölünen sayıların ortalamasını hesaplayan programı yazınız.
 
 ### :green_square: CEVAP
 
@@ -856,7 +854,40 @@ public class test {
 <summary>Kodu görmek için tıklayınız.</summary>
 
 ```java
+import java.util.Scanner;
 
+public class test {
+    public static void main(String[] args) {
+        //Değişkenleri tanımlayalım.
+        int girilenSayi;
+
+        //Kullanıcıdan sayıyı alalım.
+        Scanner input = new Scanner(System.in);
+        System.out.print("Lütfen sayıyı giriniz: ");
+        girilenSayi=input.nextInt();
+
+        //Girilen sayıya kadar olan çift sayıları ekrana yazdıralım.
+        System.out.print("Girilen sayıya kadar olan çift sayılar: ");
+        for (int i = 1; i<=girilenSayi; i++){
+            if (i%2==0)
+                System.out.print(i + ", ");
+        }
+
+        System.out.println("");
+
+        //3'e ve 4'e tam bölünenleri yazdıralım.
+        System.out.print("Girilen sayıya kadar olan sayılardan 3'e ve 4'e tam bölünenlerin ortalaması: ");
+        int ortalama=0, bölen=0;
+
+        for (int i = 1; i<=girilenSayi; i++){
+            if (i%3==0 && i%4==0) {
+                ortalama += i;
+                bölen++;
+            }
+        }
+        System.out.println(ortalama/bölen);
+    }
+}
 ```
 </details>
 
