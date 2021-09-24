@@ -17,7 +17,7 @@ Bu README dosyasında bu eğitimdeki pratik ve ödevlerin cevaplarını bulacaks
 | [PRATİK 8](https://github.com/osmantuysuz/Java101_PatikaDev#brain-prati̇k-8---sınıfı-geçme-durumu) - Sınıfı Geçme Durumu | [ÖDEV 8]() - Ters Üçgen Yapımı |
 | [PRATİK 9](https://github.com/osmantuysuz/Java101_PatikaDev#brain-prati̇k-9----hava-sıcaklığına-göre-etkinlik-önerme) - Hava Sıcaklığına Göre Etkinlik Önerme | [ÖDEV 9]() -  1-100 Arasındaki Asal Sayıları Bulan Program |
 | [PRATİK 10](https://github.com/osmantuysuz/Java101_PatikaDev#brain-prati̇k-10---sayıları-büyükten-küçüğe-sıralayan-program) - Sayıları Büyükten Küçüğe Sıralayan Program | [ÖDEV 10]() - Fibonacci Serisi |
-| [PRATİK 11]() - Burç Bulan Program | [ÖDEV 11]() - Üs Hesabı Yapan Program (Recursive Metot) |
+| [PRATİK 11](https://github.com/osmantuysuz/Java101_PatikaDev#brain-prati̇k-11---burç-bulan-program) - Burç Bulan Program | [ÖDEV 11]() - Üs Hesabı Yapan Program (Recursive Metot) |
 | [PRATİK 12]() - Girilen Sayılardan Çift Sayıları Bulan Program | [ÖDEV 12]() - Asal Sayı Bulan Program (Recursive Metot) |
 | [PRATİK 13]() - Tek Sayıların Toplamını Bulan Program | [ÖDEV 13]() - Desene Göre Metot Oluşturma (Recursive Metot) |
 | [PRATİK 14]() - Girilen Sayıdan Küçük 2'nin Kuvvetlerini Bulan Program |
@@ -836,6 +836,26 @@ public class test {
     }
 }
 
+
+```
+</details>
+
+------------------------------------------------------------------------------------------------------------------------------------
+## :brain: PRATİK 12 - Girilen Sayılardan Çift Sayıları Bulan Program
+
+### :question: SORU 
+
+
+:pill:
+
+:warning: 
+
+### :green_square: CEVAP
+
+<details>
+<summary>Kodu görmek için tıklayınız.</summary>
+
+```java
 
 ```
 </details>
