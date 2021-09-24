@@ -643,6 +643,204 @@ public class test {
 </details>
 
 --------------------------------------------------------------------------------------------------------------------------------------
+## :brain: PRATİK 11 - Burç Bulan Program
+
+### :question: SORU 
+Java koşullu ifadeler ile kullanıcının burcunu bulan program yapımı.
+
+:pill: Koç Burcu : 21 Mart - 20 Nisan
+:pill: Boğa Burcu : 21 Nisan - 21 Mayıs
+:pill: İkizler Burcu : 22 Mayıs - 22 Haziran
+:pill: Yengeç Burcu : 23 Haziran - 22 Temmuz
+:pill: Aslan Burcu : 23 Temmuz - 22 Ağustos
+:pill: Başak Burcu : 23 Ağustos - 22 Eylül
+:pill: Terazi Burcu : 23 Eylül - 22 Ekim
+:pill: Akrep Burcu : 23 Ekim - 21 Kasım
+:pill: Yay Burcu : 22 Kasım - 21 Aralık
+:pill: Oğlak Burcu : 22 Aralık - 21 Ocak
+:pill: Kova Burcu : 22 Ocak - 19 Şubat
+:pill:Balık Burcu : 20 Şubat - 20 Mart
+
+:warning: Aynı örneği switch-case kullanmadan yapınız.
+
+### :green_square: CEVAP
+
+<details>
+<summary>Kodu görmek için tıklayınız.</summary>
+
+```java
+import java.util.Scanner;
+
+public class test {
+    public static void main(String[] args) {
+
+        //Değişken tanımlamaları
+        int ay, gun;
+
+        // Kullanıcıdan ay ve gün değerlerini alalım.
+        Scanner input = new Scanner(System.in);
+        System.out.print("Doğduğunuz ayı giriniz: ");
+        ay=input.nextInt();
+        System.out.print("Doğduğunuz günü giriniz: ");
+        gun=input.nextInt();
+
+        // Switch - Case ile yapalım
+        System.out.println("Switch - Case ile Çözüm");
+        switch (ay) {
+            case (1):
+                if (gun>=22)
+                    System.out.println("Kova Burcusunuz.");
+                else
+                    System.out.println(("Oğlak Burcusunuz"));
+                break;
+
+            case (2):
+                if (gun>=20)
+                    System.out.println("Balık Burcusunuz.");
+                else
+                    System.out.println(("Kova Burcusunuz"));
+                break;
+
+            case (3):
+                if (gun>=21)
+                    System.out.println("Koç Burcusunuz.");
+                else
+                    System.out.println(("Kova Burcusunuz"));
+                break;
+
+            case (4):
+                if (gun>=21)
+                    System.out.println("Boğa Burcusunuz.");
+                else
+                    System.out.println(("Koç Burcusunuz"));
+                break;
+
+            case (5):
+                if (gun>=22)
+                    System.out.println("İkizler Burcusunuz.");
+                else
+                    System.out.println(("Boğa Burcusunuz"));
+                break;
+
+            case (6):
+                if (gun>=23)
+                    System.out.println("Yengeç Burcusunuz.");
+                else
+                    System.out.println(("İkizler Burcusunuz"));
+                break;
+
+            case (7):
+                if (gun>=23)
+                    System.out.println("Aslan Burcusunuz.");
+                else
+                    System.out.println(("Yengeç Burcusunuz"));
+                break;
+
+            case (8):
+                if (gun>=23)
+                    System.out.println("Başak Burcusunuz.");
+                else
+                    System.out.println(("Aslan Burcusunuz"));
+                break;
+
+            case (9):
+                if (gun>=23)
+                    System.out.println("Terazi Burcusunuz.");
+                else
+                    System.out.println(("Başak Burcusunuz"));
+                break;
+
+            case (10):
+                if (gun>=22)
+                    System.out.println("Akrep Burcusunuz.");
+                else
+                    System.out.println(("Terazi Burcusunuz"));
+                break;
+
+            case (11):
+                if (gun>=23)
+                    System.out.println("Yay Burcusunuz.");
+                else
+                    System.out.println(("Akrep Burcusunuz"));
+                break;
+
+            case (12):
+                if (gun>=22)
+                    System.out.println("Oğlak Burcusunuz.");
+                else
+                    System.out.println(("Yay Burcusunuz"));
+                break;
+        }
+
+        //Switch Case kullanmadan aynı örneği yapalım.
+        System.out.println("İf Else ile çözüm");
+        if (ay==1 && gun>=22)
+            System.out.println("Kova Burcusunuz.");
+        else if(ay==1)
+            System.out.println("Oğlak Burcusunuz");
+
+        if(ay==2 && gun>=20)
+            System.out.println("Balık Burcusunuz.");
+        else if(ay==2)
+            System.out.println("Kova Burcusunuz");
+
+        if(ay==3 && gun>=21)
+            System.out.println("Koç Burcusunuz.");
+        else if(ay==3)
+            System.out.println("Balık Burcusunuz.");
+
+        if(ay==4 && gun>=21)
+            System.out.println("Boğa Burcusunuz.");
+        else if(ay==4)
+            System.out.println("Koç Burcusunuz.");
+
+        if(ay==5 && gun>=22)
+            System.out.println("İkizler Burcusunuz.");
+        else if(ay==5)
+            System.out.println("Boğa Burcusunuz.");
+
+        if(ay==6 && gun>=23)
+            System.out.println("Yengeç Burcusunuz.");
+        else if(ay==6)
+            System.out.println("İkizler Burcusunuz.");
+
+        if(ay==7 && gun>=23)
+            System.out.println("Aslan Burcusunuz.");
+        else if(ay==7)
+            System.out.println("Yengeç Burcusunuz.");
+
+        if(ay==8 && gun>=23)
+            System.out.println("Başak Burcusunuz.");
+        else if(ay==8)
+            System.out.println("Aslan Burcusunuz.");
+
+        if(ay==9 && gun>=23)
+            System.out.println("Terazi Burcusunuz.");
+        else if(ay==9)
+            System.out.println("Başak Burcusunuz.");
+
+        if(ay==10 && gun>=23)
+            System.out.println("Akrep Burcusunuz.");
+        else if(ay==10)
+            System.out.println("Terazi Burcusunuz.");
+
+        if(ay==11 && gun>=22)
+            System.out.println("Yay Burcusunuz.");
+        else if(ay==11)
+            System.out.println("Akrep Burcusunuz.");
+
+        if(ay==12 && gun>=22)
+            System.out.println("Oğlak Burcusunuz.");
+        else if(ay==12)
+            System.out.println("Yay Burcusunuz.");
+    }
+}
+
+
+```
+</details>
+
+--------------------------------------------------------------------------------------------------------------------------------------
 
 ## :brain: ÖDEV 1 - Vücut Kitle İndeksi Hesaplama
 
