@@ -2163,36 +2163,299 @@ public class GelismisHesapMakinesi {
 ## :brain: PRATİK 25 - Öğrenci Bilgi Sistemi
 
 ### :question: SORU 
+:pill: Course Sınıfı Özellikleri :
+- Nitelikler : name,code,prefix,note,Teacher
+- Metotlar : Course() , addTeacher() , printTeacher()
 
+:pill: Teacher Sınıfı Özellikleri :
+- Nitelikler : name,mpno,branch
+- Metotlar : Teacher()
 
-:mag:
-### :green_square: CEVAP
+:pill: Student Sınıfı Özellikleri :
+- Nitelikler: name, stuNo, classes, course1, course2, course3, avarage, isPass 
+- Metotlar: Student(), addBulkExamNote(), isPass(), calcAvarage(), printNote()
 
-<details>
-<summary>Kodu görmek için tıklayınız.</summary>
+Course sınıfına derse ait sözlü notu kısmını girin ve ortalamaya etkisini her ders için ayrı ayrı belirtin. Sözlü notlarınıda ortalamaya etkileme yüzdesi ile dahil edin.
+
+Örnek : Fizik dersinine ait sözlü notunun ortalamaya etkisi %20 ise sınav notunun etkisi %80'dir.
+
+Öğrenci sözlüden 90, sınavdan 60 almış ise, o dersin genel ortalamaya etkisi şu şekilde hesaplanır :
+
+Fizik Ortalaması : (90 * 0.20) + (60* 0.80);
+
 
 ```java
+public class Student {
+    String name,stuNo;
+    int classes;
+    Course mat;
+    Course fizik;
+    Course kimya;
+    double avarage;
+    boolean isPass;
+
+
+    Student(String name, int classes, String stuNo, Course mat,Course fizik,Course kimya) {
+        this.name = name;
+        this.classes = classes;
+        this.stuNo = stuNo;
+        this.mat = mat;
+        this.fizik = fizik;
+        this.kimya = kimya;
+        calcAvarage();
+        this.isPass = false;
+    }
+
+
+    public void addBulkExamNote(int mat, int fizik, int kimya) {
+
+        if (mat >= 0 && mat <= 100) {
+            this.mat.note = mat;
+        }
+
+        if (fizik >= 0 && fizik <= 100) {
+            this.fizik.note = fizik;
+        }
+
+        if (kimya >= 0 && kimya <= 100) {
+            this.kimya.note = kimya;
+        }
+
+    }
+
+    public void isPass() {
+        if (this.mat.note == 0 || this.fizik.note == 0 || this.kimya.note == 0) {
+            System.out.println("Notlar tam olarak girilmemiş");
+        } else {
+            this.isPass = isCheckPass();
+            printNote();
+            System.out.println("Ortalama : " + this.avarage);
+            if (this.isPass) {
+                System.out.println("Sınıfı Geçti. ");
+            } else {
+                System.out.println("Sınıfta Kaldı.");
+            }
+        }
+    }
+
+    public void calcAvarage() {
+        this.avarage = (this.fizik.note + this.kimya.note + this.mat.note) / 3;
+    }
+
+    public boolean isCheckPass() {
+        calcAvarage();
+        return this.avarage > 55;
+    }
+
+    public void printNote(){
+        System.out.println("=========================");
+        System.out.println("Öğrenci : " + this.name);
+        System.out.println("Matematik Notu : " + this.mat.note);
+        System.out.println("Fizik Notu : " + this.fizik.note);
+        System.out.println("Kimya Notu : " + this.kimya.note);
+    }
+}
+```
+
+```java
+public class Course {
+    Teacher courseTeacher;
+    String name;
+    String code;
+    String prefix;
+    int note;
+
+    public Course(String name, String code, String prefix) {
+        this.name = name;
+        this.code = code;
+        this.prefix = prefix;
+        this.note = 0;
+    }
+
+    public void addTeacher(Teacher t) {
+        if (this.prefix.equals(t.branch)) {
+            this.courseTeacher = t;
+            System.out.println("İşlem başarılı");
+        } else {
+            System.out.println(t.name + " Akademisyeni bu dersi veremez.");
+        }
+    }
+
+    public void printTeacher() {
+        if (courseTeacher != null) {
+            System.out.println(this.name + " dersinin Akademisyeni : " + courseTeacher.name);
+        } else {
+            System.out.println(this.name + " dersine Akademisyen atanmamıştır.");
+        }
+    }
+}
+```
+
+```java
+public class Teacher {
+    String name;
+    String mpno;
+    String branch;
+
+    public Teacher(String name, String mpno, String branch) {
+        this.name = name;
+        this.mpno = mpno;
+        this.branch = branch;
+    }
+}
+```
+
+```java
+public class Main {
+    public static void main(String[] args) {
+
+        Course mat = new Course("Matematik", "MAT101", "MAT");
+        Course fizik = new Course("Fizik", "FZK101", "FZK");
+        Course kimya = new Course("Kimya", "KMY101", "KMY");
+
+        Teacher t1 = new Teacher("Mahmut Hoca", "90550000000", "MAT");
+        Teacher t2 = new Teacher("Fatma Ayşe", "90550000001", "FZK");
+        Teacher t3 = new Teacher("Ali Veli", "90550000002", "KMY");
+
+        mat.addTeacher(t1);
+        fizik.addTeacher(t2);
+        kimya.addTeacher(t3);
+
+        Student s1 = new Student("İnek Şaban", 4, "140144015", mat, fizik, kimya);
+        s1.addBulkExamNote(50,20,40);
+        s1.isPass();
+
+        Student s2 = new Student("Güdük Necmi", 4, "2211133", mat, fizik, kimya);
+        s2.addBulkExamNote(100,50,40);
+        s2.isPass();
+
+        Student s3 = new Student("Hayta İsmail", 4, "221121312", mat, fizik, kimya);
+        s3.addBulkExamNote(50,20,40);
+        s3.isPass();
+    }
+}
 
 ```
-</details>
 
 ------------------------------------------------------------------------------------------------------------------------------------
 ## :brain: PRATİK 26 - Boks Oyunu
 
 ### :question: SORU 
+Java Sınıflar ile boks maçını simüle eden programı yazıyoruz.
 
-
-:mag:
-### :green_square: CEVAP
-
-<details>
-<summary>Kodu görmek için tıklayınız.</summary>
+:mag: Ödev Projeye ilk kimin dövüşe başlayacağını %50 olasılık ile hesaplayan sistemi entegre ediniz.
 
 ```java
+public class Fighter {
+    String name;
+    int damage;
+    int health;
+    int weight;
+    double dodge;
+
+    public Fighter(String name, int damage, int health, int weight, double dodge) {
+        this.name = name;
+        this.damage = damage;
+        this.health = health;
+        this.weight = weight;
+        this.dodge = dodge;
+    }
+
+    public int hit(Fighter foe) {
+        System.out.println("------------");
+        System.out.println(this.name + " => " + foe.name + " " +  this.damage + " hasar vurdu.");
+
+        if (foe.dodge()) {
+            System.out.println(foe.name + " gelen hasarı savurdu.");
+            return foe.health;
+        }
+
+        if (foe.health - this.damage < 0)
+            return 0;
+
+        return foe.health - this.damage;
+    }
+
+    public boolean dodge() {
+        double randomValue = Math.random() * 100;  //0.0 to 99.9
+        return randomValue <= this.dodge;
+    }
+}
 
 ```
-</details>
 
+```java
+public class Ring {
+    Fighter f1;
+    Fighter f2;
+    int minWeight;
+    int maxWeight;
+
+    public Ring(Fighter f1, Fighter f2, int minWeight, int maxWeight) {
+        this.f1 = f1;
+        this.f2 = f2;
+        this.minWeight = minWeight;
+        this.maxWeight = maxWeight;
+    }
+
+    public void run() {
+
+        if (checkWeight()) {
+            while (f1.health > 0 && f2.health > 0) {
+                System.out.println("======== YENİ ROUND ===========");
+                f2.health = f1.hit(f2);
+                if (isWin()){
+                    break;
+                }
+                f1.health = f2.hit(f1);
+                if (isWin()){
+                    break;
+                }
+                printScore();
+            }
+
+        } else {
+            System.out.println("Sporcuların ağırlıkları uyuşmuyor.");
+        }
+
+
+    }
+
+    public boolean checkWeight() {
+        return (f1.weight >= minWeight && f1.weight <= maxWeight) && (f2.weight >= minWeight && f2.weight <= maxWeight);
+    }
+
+    public boolean isWin() {
+        if (f1.health == 0) {
+            System.out.println("Maçı Kazanan : " + f2.name);
+            return true;
+        } else if (f2.health == 0){
+            System.out.println("Maçı Kazanan : " + f2.name);
+            return true;
+        }
+
+        return false;
+    }
+
+
+    public void printScore() {
+        System.out.println("------------");
+        System.out.println(f1.name + " Kalan Can \t:" + f1.health);
+        System.out.println(f2.name + " Kalan Can \t:" + f2.health);
+    }
+}
+```
+
+```java
+public class Main {
+    public static void main(String[] args) {
+      Fighter marc = new Fighter("Marc" , 15 , 100, 90, 0);
+      Fighter alex = new Fighter("Alex" , 10 , 95, 100, 0);
+      Ring r = new Ring(marc,alex , 90 , 100);
+      r.run();
+    }
+}
+```
 ------------------------------------------------------------------------------------------------------------------------------------
 
 ## :brain: ÖDEV 1 - Vücut Kitle İndeksi Hesaplama
@@ -2875,8 +3138,6 @@ Sonuç : 125
 <summary>Kodu görmek için tıklayınız.</summary>
 
 ```java
-package Odev11;
-
 import java.util.Scanner;
 
 public class UsHesabiYapanProgram {
@@ -2913,7 +3174,28 @@ public class UsHesabiYapanProgram {
 ## :brain: ÖDEV 12 - Asal Sayı Bulan Program (Recursive Metot)
 
 ### :question: SORU 
+Java dilinde "Recursive" metot kullanarak, kullanıcıdan alınan sayının "Asal" sayı olup olmadığını bulan programı yazın.
 
+:mag: Senaryo
+```
+Sayı Giriniz : 22
+22 sayısı ASAL değildir !
+```
+
+```
+Sayı Giriniz : 2
+2 sayısı ASALDIR !
+```
+
+```
+Sayı Giriniz : 39
+39 sayısı ASAL değildir !
+```
+
+```
+Sayı Giriniz : 17
+17 sayısı ASALDIR !
+```
 
 ### :green_square: CEVAP
 
@@ -2921,6 +3203,41 @@ public class UsHesabiYapanProgram {
 <summary>Kodu görmek için tıklayınız.</summary>
 
 ```java
+import java.util.Scanner;
+
+public class AsalSayiBulanProgram {
+
+    static int asal(int x, int y)
+    {
+        if(y < x)
+        {
+            if(x % y != 0)
+            {
+                return(asal(x, ++y));
+            }
+            else
+            {
+                return 0;
+            }
+        }
+        return 1;
+    }
+
+    public static void main(String[] args) {
+        int sayi;
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Sayı Giriniz: " );
+        sayi=input.nextInt();
+
+        if (asal(sayi,2)==1){
+            System.out.println(sayi+" sayısı ASALDIR !");
+        } else {
+            System.out.println(sayi+" sayısı ASAL değildir !");
+        }
+
+    }
+}
 
 ```
 </details>
@@ -2929,6 +3246,32 @@ public class UsHesabiYapanProgram {
 ## :brain: ÖDEV 13 - Desene Göre Metot Oluşturma (Recursive Metot)
 
 ### :question: SORU 
+Java dilinde kullanıcıdan alınan n değerine göre aşağıdaki kurala uyan döngü kullanmadan bir "Recursive" metot yazın.
+
+:pill: Kural : Girilen sayı 0 veya negatif olduğu yere kadar girilen sayıdan 5 rakamını çıkarın. Her çıkarma işlemi sırasında ekrana son değeri yazdırın. Sayı negatif veya 0 olduktan sonra tekrar 5 ekleyin. Yine her ekleme işleminde sayının son değerini ekrana yazdırın.
+
+:mag: Senaryo
+
+```
+N Sayısı : 16
+Çıktısı : 16 11 6 1 -4 1 6 11 16 
+```
+
+```
+N Sayısı : 10
+Çıktısı : 10 5 0 5 10 
+```
+
+```
+N Sayısı : 25
+Çıktısı : 25 20 15 10 5 0 5 10 15 20 25 
+```
+
+```
+N Sayısı : 5
+Çıktısı : 5 0 5 
+
+```
 
 
 ### :green_square: CEVAP
@@ -2937,6 +3280,58 @@ public class UsHesabiYapanProgram {
 <summary>Kodu görmek için tıklayınız.</summary>
 
 ```java
+import java.util.Scanner;
+
+public class DeseneGoreMetotOlusturma {
+
+    static int besCikar(int n, boolean dNoktasi, int sayac) {
+
+        /*
+         n = Kullanıcının girmiş olduğu sayı.
+
+         dNoktasi = Sayının 0'a eşit veya küçük olmasının kontrolünü yapan değişken. Girilen sayı sıfırdan büyük
+         olacağından HER ZAMAN "TRUE"
+
+         sayac = 0 veya -(eksi) değerden önce ekrana basılan sayıların sayısı. Sayaç değişkeni kullanıcıdan alınan
+         n değerine bağlı olarak metot içerisinde değişebilir. Ancak başlangıç değeri HER ZAMAN "0" (sıfır) olmalıdır.
+
+
+         Örnek: 7 2 0 2 7 -> 0'dan önce 2 sayı var (7 ve 2).
+         Sayac değişkeni ile n sayısı artırlmaya başlandığında serinin sonsuza gitmesi engellenecek.
+        */
+
+        if (dNoktasi) {
+            if (n > 0) {
+                System.out.print(n + " ");
+                sayac++;
+                return besCikar(n - 5, true, sayac);
+            } else {
+                return besCikar(n, false, sayac);
+            }
+        } else {
+            System.out.print(n + " ");
+            if (sayac > 0) {
+                sayac--;
+                return besCikar(n + 5, false, sayac);
+            } else {
+                return 0;
+            }
+        }
+
+    }
+
+    public static void main(String[] args) {
+        int n;
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("N Sayısı : ");
+        n = input.nextInt();
+
+        System.out.print("Çıktısı : ");
+        besCikar(n, true, 0);
+
+    }
+}
 
 ```
 </details>
