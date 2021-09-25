@@ -24,7 +24,7 @@ Bu README dosyasında bu eğitimdeki pratik ve ödevlerin cevaplarını bulacaks
 | [PRATİK 15](https://github.com/osmantuysuz/Java101_PatikaDev#brain-prati̇k-15---faktöriyel-hesaplayan-program) - Faktöriyel Hesaplayan Program |
 | [PRATİK 16](https://github.com/osmantuysuz/Java101_PatikaDev#brain-prati̇k-16---üslü-sayı-hesaplayan-program) - Üslü Sayı Hesaplayan Program |
 | [PRATİK 17](https://github.com/osmantuysuz/Java101_PatikaDev#brain-prati̇k-17---armstrong-sayıları-bulan-program) - Armstrong Sayıları Bulan Program |
-| [PRATİK 18]() - Harmonik Sayıları Bulan Program |
+| [PRATİK 18](https://github.com/osmantuysuz/Java101_PatikaDev#brain-prati̇k-18---harmonik-sayıları-bulan-program) - Harmonik Sayıları Bulan Program |
 | [PRATİK 19]() - Yıldız ile Üçgen Yapımı |
 | [PRATİK 20]() - ATM Projesi |
 | [PRATİK 21]() - EBOB ve EKOK Bulan Program |
@@ -1286,6 +1286,7 @@ public class ArmstrongSayilariBulanProgram {
 Java ile girilen sayının harmonik serisini bulan program yazacağız.
 
 :pill: Harmonik Seri Formülü :
+
 ![Harmonik Seri Formulü](https://raw.githubusercontent.com/Kodluyoruz/taskforce/main/java101/pratik-harmonic/figures/harmonic_series.gif)
  
 ### :green_square: CEVAP
