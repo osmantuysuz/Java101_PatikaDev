@@ -33,6 +33,10 @@ Bu README dosyasında bu eğitimdeki pratik ve ödevlerin cevaplarını bulacaks
 | [PRATİK 24](https://github.com/osmantuysuz/Java101_PatikaDev#brain-prati̇k-24---gelişmiş-hesap-makinesi) - Gelişmiş Hesap Makinesi |
 | [PRATİK 25](https://github.com/osmantuysuz/Java101_PatikaDev#brain-prati̇k-25---öğrenci-bilgi-sistemi) - Öğrenci Bilgi Sistemi |
 | [PRATİK 26](https://github.com/osmantuysuz/Java101_PatikaDev#brain-prati̇k-26---boks-oyunu) - Boks Oyunu |
+| [PRATİK 27]() - Dizideki Elemanların Ortalamasını Bulan Program |
+| [PRATİK 28]() - Dizideki Maksimum ve Minimum Değerleri Bulan Program |
+| [PRATİK 29]() - Çok Boyutlu Diziler ile A Harfi Yazdıran Program |
+| [PRATİK 30]() - Dizideki Tekrar Eden Sayıları Bulan Program |
 ------------------------------------------------------------------------------------------------------------------------------------
 ## :brain: PRATİK 1 - Not Ortalaması
 
@@ -2457,6 +2461,91 @@ public class Main {
 }
 ```
 ------------------------------------------------------------------------------------------------------------------------------------
+## :brain: PRATİK 27 - Dizideki Elemanların Ortalamasını Bulan Program
+
+### :question: SORU 
+Dizideki Elemanların Ortalamasını Bulan Program
+
+### :green_square: CEVAP
+
+<details>
+<summary>Kodu görmek için tıklayınız.</summary>
+
+```java
+import java.util.Scanner;
+
+public class test {
+    public static void main(String[] args) {
+        int[] numbers = {1, 2, 3, 4, 5};
+        int sum = 0;
+        for (int i = 0; i < numbers.length; i++) {
+            sum += numbers[i];
+        }
+
+        System.out.println(sum / numbers.length);
+    }
+}
+
+
+```
+</details>
+
+------------------------------------------------------------------------------------------------------------------------------------
+## :brain: PRATİK 28 - Dizideki Maksimum ve Minimum Değerleri Bulan Program
+
+### :question: SORU 
+
+:pill: 
+
+
+### :green_square: CEVAP
+
+<details>
+<summary>Kodu görmek için tıklayınız.</summary>
+
+```java
+
+```
+</details>
+
+------------------------------------------------------------------------------------------------------------------------------------
+## :brain: PRATİK 29 - Çok Boyutlu Diziler ile A Harfi Yazdıran Program
+
+### :question: SORU 
+
+:pill: 
+
+
+### :green_square: CEVAP
+
+<details>
+<summary>Kodu görmek için tıklayınız.</summary>
+
+```java
+
+```
+</details>
+
+------------------------------------------------------------------------------------------------------------------------------------
+## :brain: PRATİK 30 - Dizideki Tekrar Eden Sayıları Bulan Program
+
+### :question: SORU 
+
+:pill: 
+
+
+### :green_square: CEVAP
+
+<details>
+<summary>Kodu görmek için tıklayınız.</summary>
+
+```java
+
+```
+</details>
+
+------------------------------------------------------------------------------------------------------------------------------------
+
 
 ## :brain: ÖDEV 1 - Vücut Kitle İndeksi Hesaplama
 
