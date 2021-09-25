@@ -20,7 +20,7 @@ Bu README dosyasında bu eğitimdeki pratik ve ödevlerin cevaplarını bulacaks
 | [PRATİK 11](https://github.com/osmantuysuz/Java101_PatikaDev#brain-prati̇k-11---burç-bulan-program) - Burç Bulan Program | [ÖDEV 11](https://github.com/osmantuysuz/Java101_PatikaDev#brain-ödev-11---üs-hesabı-yapan-program-recursive-metot) - Üs Hesabı Yapan Program (Recursive Metot) |
 | [PRATİK 12](https://github.com/osmantuysuz/Java101_PatikaDev#brain-prati̇k-12---girilen-sayılardan-çift-sayıları-bulan-program) - Girilen Sayılardan Çift Sayıları Bulan Program | [ÖDEV 12](https://github.com/osmantuysuz/Java101_PatikaDev#brain-ödev-12---asal-sayı-bulan-program-recursive-metot) - Asal Sayı Bulan Program (Recursive Metot) |
 | [PRATİK 13](https://github.com/osmantuysuz/Java101_PatikaDev#brain-prati̇k-13---tek-sayıların-toplamını-bulan-program) - Tek Sayıların Toplamını Bulan Program | [ÖDEV 13](https://github.com/osmantuysuz/Java101_PatikaDev#brain-ödev-13---desene-göre-metot-oluşturma-recursive-metot) - Desene Göre Metot Oluşturma (Recursive Metot) |
-| [PRATİK 14](https://github.com/osmantuysuz/Java101_PatikaDev#brain-prati̇k-14---girilen-sayıdan-küçük-2nin-kuvvetlerini-bulan-program) - Girilen Sayıdan Küçük 2'nin Kuvvetlerini Bulan Program |
+| [PRATİK 14](https://github.com/osmantuysuz/Java101_PatikaDev#brain-prati̇k-14---girilen-sayıdan-küçük-2nin-kuvvetlerini-bulan-program) - Girilen Sayıdan Küçük 2'nin Kuvvetlerini Bulan Program | [ÖDEV 14]() |
 | [PRATİK 15](https://github.com/osmantuysuz/Java101_PatikaDev#brain-prati̇k-15---faktöriyel-hesaplayan-program) - Faktöriyel Hesaplayan Program |
 | [PRATİK 16](https://github.com/osmantuysuz/Java101_PatikaDev#brain-prati̇k-16---üslü-sayı-hesaplayan-program) - Üslü Sayı Hesaplayan Program |
 | [PRATİK 17](https://github.com/osmantuysuz/Java101_PatikaDev#brain-prati̇k-17---armstrong-sayıları-bulan-program) - Armstrong Sayıları Bulan Program |
@@ -3334,6 +3334,120 @@ public class DeseneGoreMetotOlusturma {
 }
 
 ```
+</details>
+
+------------------------------------------------------------------------------------------------------------------------------------
+## :brain: ÖDEV 14 - Maaş Hesaplayıcı
+
+### :question: SORU 
+Java'da "Employee" adında fabrika çalışanlarını temsil eden ve metotları ile çalışanların maaşlarını hesaplayan bir sınıf yazmalısınız. Bu sınıf 4 nitelik ve 5 metoda sahip olacaktır.
+
+:pill: Sınıfın Nitelikleri
+- name : Çalışanın adı ve soyadı
+- salary: Çalışanın maaşı
+- workHours : Haftalık çalışma saati
+- hireYear : İşe başlangıç yılı
+
+:pill: Sınıfın Metotları
+- Employee(name,salary,workHours,hireYear) : Kurucu metot olup 4 parametre alacaktır.
+- tax() : Maaşa uygulanan vergiyi hesaplayacaktır.
+- Çalışanın maaşı 1000 TL'den az ise vergi uygulanmayacaktır.
+- Çalışanın maaşı 1000 TL'den fazla ise maaşının %3'ü kadar vergi uygulanacaktır.
+- bonus() : Haftada 40 saatten fazla çalışıldığında saat başına 30 TL olacak şekilde maaşa uygulanacak bonus ücretleri hesaplayacaktır.
+- raiseSalary() : Çalışanın işe başlangıç yılına göre maaş artışını hesaplayacaktır. Şuan ki yılı 2021 olarak alın.
+- Eğer çalışan 10 yıldan az bir süredir çalışıyorsa maaşına %5 zam yapılacaktır.
+- Eğer çalışan 9 yıldan fazla ve 20 yıldan az çalışıyorsa maaşına %10 zam yapılacaktır.
+- Eğer çalışan 19 yıldan fazla çalışıyorsa %15 zam yapılacaktır.
+- toString() : Çalışana ait bilgileri ekrana bastıracaktır.
+
+:mag: Örnek
+```
+Adı : kemal
+Maaşı : 2000.0
+Çalışma Saati : 45
+Başlangıç Yılı : 1985
+Vergi : 60.0
+Bonus : 150.0
+Maaş Artışı : 300.0
+Vergi ve Bonuslar ile birlikte maaş : 2090.0
+Toplam Maaş : 2390.0 
+```
+
+### :green_square: CEVAP
+
+<details>
+<summary>Kodu görmek için tıklayınız.</summary>
+
+```java
+import java.util.Scanner;
+
+public class test {
+    public static void main(String[] args) {
+        Employee calisan1=new Employee("Ahmet", 2000, 35, 2015);
+        Employee calisan2=new Employee("Osman", 3000, 50, 2018);
+
+        calisan1.tax(calisan1.salary);
+        calisan1.bonus(calisan1.workHours);
+        calisan1.raiseSalary(calisan1.hireYear);
+
+        calisan2.tax(calisan2.salary);
+        calisan2.bonus(calisan2.workHours);
+        calisan2.raiseSalary(calisan2.hireYear);
+
+        calisan1.infoEmployee();
+        System.out.println("---------------");
+        calisan2.infoEmployee();
+    }
+}
+```
+
+```java 
+public class Employee {
+    String name;
+    double salary;
+    int workHours;
+    int hireYear;
+
+    Employee(String name, double salary, int workHours, int hireYear){
+        this.name=name;
+        this.salary=salary;
+        this.workHours=workHours;
+        this.hireYear=hireYear;
+    }
+
+    void tax(double salary){
+        if (salary>=1000)
+            this.salary=salary-(salary*0.03);
+        else
+            this.salary=this.salary;
+    }
+
+    void bonus(int workHours){
+        if (this.workHours>40){
+            this.salary=this.salary+((workHours-40)*30);
+        }else
+            this.salary=this.salary;
+    }
+
+    void raiseSalary(int hireYear){
+        if ((2021-hireYear)<10)
+            this.salary=this.salary+(this.salary*0.05);
+        else if (((2021-hireYear)>=10) && ((2021-hireYear)<20))
+            this.salary=this.salary+(this.salary*0.1);
+        else
+            this.salary=this.salary+(this.salary*0.2);
+    }
+
+    void infoEmployee(){
+        System.out.println("Adı: "+ this.name);
+        System.out.println("Maaş: " + this.salary);
+        System.out.println("Çalışma Saati: " + this.workHours);
+        System.out.println("Başlangıç Yılı: " + this.hireYear);
+    }
+}
+
+```
+
 </details>
 
 ------------------------------------------------------------------------------------------------------------------------------------
