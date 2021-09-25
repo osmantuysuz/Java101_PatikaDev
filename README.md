@@ -1319,14 +1319,100 @@ public class HarmonikSeriBulanProgram {
 
 ### :question: SORU 
 
+Java'da döngüler kullanılarak yıldızlar ile üçgen yapıyoruz.
 
-:mag:
+:pill: Örnek Kod
+```java
+     * 
+    *** 
+   ***** 
+  ******* 
+ ********* 
+***********
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner klavye = new Scanner(System.in);
+        System.out.println("Bir Sayı Giriniz :");
+        int n = klavye.nextInt();
+
+        for (int i = 0; i <= n ; i++) {
+            for (int j = 0; j < (n - i); j++) {
+                System.out.print(" ");
+            }
+            for (int k = 1; k <= (2 * i + 1); k++) {
+                System.out.print("*");
+            }
+            System.out.println(" ");
+        }
+    }
+}
+
+```
+
+:warning: Java'da döngüler kullanarak yıldızlar ile elmas yapınız.
+
 ### :green_square: CEVAP
 
 <details>
 <summary>Kodu görmek için tıklayınız.</summary>
 
 ```java
+import java.util.Scanner;
+
+public class YildizlarIleUcgenYapimi {
+    public static void main(String[] args) {
+        int katSay1, katSay2;
+        Scanner input = new Scanner(System.in);
+
+        //Yıldız ile Üçgen Yapımı
+        System.out.print("\n!!! YILDIZ ÜÇGEN YAPIMI !!!\n");
+
+        System.out.print("Bir sayı giriniz: ");
+        katSay1 = input.nextInt();
+
+        for (int x = 0; x <= katSay1; x++) {
+
+            for (int y = 0; y < (katSay1 - x); y++) {
+                System.out.print(" ");
+            }
+            for (int z = 1; z <= (2 * x + 1); z++) {
+                System.out.print("*");
+            }
+            System.out.println("");
+        }
+
+
+        //Yıldız Elmas Yapımı
+        System.out.print("\n!!! YILDIZ ELMAS YAPIMI !!!\n");
+
+        System.out.print("Bir sayı giriniz: ");
+        katSay2 = input.nextInt();
+
+        for (int x = 0; x <= katSay2; x++) {
+
+            for (int y = 0; y < (katSay2 - x); y++) {
+                System.out.print(" ");
+            }
+            for (int z = 1; z <= (2 * x + 1); z++) {
+                System.out.print("*");
+            }
+            System.out.println("");
+        }
+
+        for (int x = 0; x <= katSay2; x++) {
+
+            for (int y = 0; y <= x; y++) {
+                System.out.print(" ");
+            }
+            for (int z = 1; z < (2 * katSay2) - (2 * x); z++) {
+                System.out.print("*");
+            }
+            System.out.println("");
+        }
+    }
+}
 
 ```
 </details>
