@@ -993,6 +993,68 @@ public class test {
 </details>
 
 ------------------------------------------------------------------------------------------------------------------------------------
+## :brain: PRATİK 15 - Faktöriyel Hesaplayan Program
+
+### :question: SORU 
+Java ile faktöriyel hesaplayan program yazıyoruz.
+
+:warning: N elemanlı bir kümenin elemanları ile oluşturulacak r elemanlı farklı grupların sayısı n’in r’li kombinasyonu olarak adlandırılır. N’in r’li kombinasyonu C(n,r) şeklinde gösterilir.
+
+Java ile kombinasyon hesaplayan program yazınız.
+
+:pill: Kombinasyon formülü: C(n,r) = n! / (r! * (n-r)!)
+
+### :green_square: CEVAP
+
+<details>
+<summary>Kodu görmek için tıklayınız.</summary>
+
+```java
+import java.util.Scanner;
+
+public class test {
+    public static void main(String[] args) {
+        //Değişkenleri tanımlayalım.
+        int girilenSayi,faktoryel=1;
+
+        //Kullanıcıdan sayıyı alalım.
+        Scanner input = new Scanner(System.in);
+        System.out.print("Lütfen sayıyı giriniz: ");
+        girilenSayi=input.nextInt();
+
+        //Faktöriyel hesaplayalım
+        for (int i=1; i<=girilenSayi; i++){
+            faktoryel=faktoryel*i;
+        }
+        System.out.println(girilenSayi + "'in faktöriyeli: " + faktoryel);
+
+
+        //Kombinasyon Hesaplama
+        int eleman, secim, kombinasyon, elemanFaktoriyel=1, secimFaktoriyel=1, elemanSecimFaktoriyel=1;
+        //Kullanıcıdan verileri alalım.
+        System.out.print("Lütfen eleman sayısını giriniz: ");
+        eleman=input.nextInt();
+        System.out.print("Lütfen seçim sayısını giriniz: ");
+        secim=input.nextInt();
+
+        for (int i=1; i<=eleman; i++){
+            elemanFaktoriyel=elemanFaktoriyel*i;
+        }
+        for (int i=1; i<=secim; i++){
+            secimFaktoriyel=secimFaktoriyel*i;
+        }
+        for (int i=1; i<=(eleman-secim); i++){
+            elemanSecimFaktoriyel=elemanSecimFaktoriyel*i;
+        }
+
+        System.out.println("C(" + eleman+","+secim+") kombinasyonu: " +elemanFaktoriyel/(secimFaktoriyel*(elemanSecimFaktoriyel)));
+    }
+}
+
+```
+</details>
+
+------------------------------------------------------------------------------------------------------------------------------------
 
 ## :brain: ÖDEV 1 - Vücut Kitle İndeksi Hesaplama
 
