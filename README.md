@@ -1648,15 +1648,71 @@ public class AtmProjesi {
 ## :brain: PRATİK 21 - EBOB ve EKOK Bulan Program
 
 ### :question: SORU 
+Java ile iki sayının EBOB ve EKOK değerlerini bulan program yazıyoruz.
 
+:pill:EBOB : İki ya da daha fazla doğal sayının ortak bölenlerinin en büyüğüne bu sayıların en büyük ortak böleni, kısaca EBOB‘u denir.
 
-:mag:
+:mag: Örnek: 18 ve 24 sayılarının en büyük ortak bölenini adım adım bulalım.
+18’in bölenleri : 1, 2, 3, 6, 9, 18
+24’ün bölenleri : 1, 2, 3, 4, 6, 8, 12, 24
+Bu ortak bölenlerin en büyüğü 6 sayısı EBOB’tur.
+
+:pill: EKOK : İki ya da daha fazla doğal sayının ortak katlarının en küçüğüne bu sayıların en küçük ortak katı, kısaca EKOK‘u denir.
+
+:mag: Örnek: 6 ve 8 sayılarının en küçük ortak katını adım adım bulalım.
+6’nın katları : 6, 12, 18, 24, 30, 36, 42, 48, …
+8’in katları : 8, 16, 24, 32, 40, 48, 56, 64, …
+Bu ortak katlardan en küçüğü 24 sayısı EKOK’tur.
+
+:pill: EKOK = (n1*n2) / EBOB
+
+:warning: Java ile iki sayının EBOB ve EKOK değerlerini "While Döngüsü" kullanarak yazınız.
+
 ### :green_square: CEVAP
 
 <details>
 <summary>Kodu görmek için tıklayınız.</summary>
 
 ```java
+import java.util.Scanner;
+
+public class test {
+    public static void main(String[] args) {
+        //Değişkenleri tanımlayalım.
+        int sayi1, sayi2, ebob=1, ekok;
+        boolean kucukSayi;
+
+        //Kullanıcıdan sayıyı alalım.
+        Scanner input = new Scanner(System.in);
+        System.out.print("Lütfen 1. sayıyı sayı giriniz: ");
+        sayi1=input.nextInt();
+        System.out.print("Lütfen 2. sayıyı sayı giriniz: ");
+        sayi2=input.nextInt();
+
+        kucukSayi=sayi1<sayi2;
+        if (kucukSayi==true){
+            for (int i=sayi1; i>=1; i--){
+                if (sayi1%i==0 && sayi2%i==0){
+                    ebob=i;
+                    System.out.print("Ebob: "+ebob);
+                    break;
+                }
+            }
+        }else{
+            for (int i=sayi2; i>=1; i--){
+                if (sayi2%i==0 && sayi1%i==0){
+                    ebob=i;
+                    System.out.print("Ebob: "+ebob);
+                    break;
+                }
+            }
+        }
+
+        System.out.println("");
+        System.out.println("Ekok: " + ((sayi1*sayi2)/ebob));
+    }
+}
+
 
 ```
 </details>
