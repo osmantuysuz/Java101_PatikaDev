@@ -26,7 +26,7 @@ Bu README dosyasında bu eğitimdeki pratik ve ödevlerin cevaplarını bulacaks
 | [PRATİK 17](https://github.com/osmantuysuz/Java101_PatikaDev#brain-prati̇k-17---armstrong-sayıları-bulan-program) - Armstrong Sayıları Bulan Program |
 | [PRATİK 18](https://github.com/osmantuysuz/Java101_PatikaDev#brain-prati̇k-18---harmonik-sayıları-bulan-program) - Harmonik Sayıları Bulan Program |
 | [PRATİK 19](https://github.com/osmantuysuz/Java101_PatikaDev#brain-prati̇k-19---yıldız-ile-üçgen-yapımı) - Yıldız ile Üçgen Yapımı |
-| [PRATİK 20]() - ATM Projesi |
+| [PRATİK 20](https://github.com/osmantuysuz/Java101_PatikaDev#brain-prati̇k-20---atm-projesi) - ATM Projesi |
 | [PRATİK 21]() - EBOB ve EKOK Bulan Program |
 | [PRATİK 22]() - Palindrom Sayılar |
 | [PRATİK 23]() - Recursive ile Fibonacci Serisi |
@@ -1421,15 +1421,225 @@ public class YildizlarIleUcgenYapimi {
 ## :brain: PRATİK 20 - ATM Projesi
 
 ### :question: SORU 
+Java döngüler ile kullanıcının banka hesabını yönetebildiği bir ATM projesi yapıyoruz.
 
+:pill: Örnek Kod
 
-:mag:
+```java
+ import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        String userName, password;
+        Scanner input = new Scanner(System.in);
+        int right = 3;
+        int balance = 1500;
+        int select;
+        while (right > 0) {
+            System.out.print("Kullanıcı Adınız :");
+            userName = input.nextLine();
+            System.out.print("Parolanız : ");
+            password = input.nextLine();
+
+            if (userName.equals("patika") && password.equals("dev123")) {
+                System.out.println("Merhaba, Kodluyoruz Bankasına Hoşgeldiniz!");
+                do {
+                    System.out.println("1-Para yatırma\n" +
+                            "2-Para Çekme\n" +
+                            "3-Bakiye Sorgula\n" +
+                            "4-Çıkış Yap");
+                    System.out.print("Lütfen yapmak istediğiniz işlemi seçiniz : ");
+                    select = input.nextInt();
+                    if (select == 1) {
+                        System.out.print("Para miktarı : ");
+                        int price = input.nextInt();
+                        balance += price;
+                    } else if (select == 2) {
+                        System.out.print("Para miktarı : ");
+                        int price = input.nextInt();
+                        if (price > balance) {
+                            System.out.println("Bakiye yetersiz.");
+                        } else {
+                            balance -= price;
+                        }
+                    } else if (select == 3) {
+                        System.out.println("Bakiyeniz : " + balance);
+                    }
+                } while (select != 4);
+                System.out.println("Tekrar görüşmek üzere.");
+                break;
+            } else {
+                right--;
+                System.out.println("Hatalı kullanıcı adı veya şifre. Tekrar deneyiniz.");
+                if (right == 0) {
+                    System.out.println("Hesabınız bloke olmuştur lütfen banka ile iletişime geçiniz.");
+                } else {
+                    System.out.println("Kalan Hakkınız : " + right);
+                }
+            }
+        }
+    }
+}
+
+```
+
+:warning: Aynı projedeki ATM işlemlerini "Switch-Case" kullanarak yapınız.
+
 ### :green_square: CEVAP
 
 <details>
 <summary>Kodu görmek için tıklayınız.</summary>
 
 ```java
+import java.util.Scanner;
+
+public class AtmProjesi {
+    public static void main(String[] args) {
+        String kullaniciAdi1, kullaniciAdi2, sifre1, sifre2;
+        int kalanHak1 = 3, kalanHak2 = 3, islem1, islem2, bakiye1 = 5000, bakiye2 = 5000, paraMiktari1, paraMiktari2;
+        Scanner input = new Scanner(System.in);
+
+        //ATM Projesi (Banka işlemleri / IF)
+         System.out.println("\n!!! ATM Projesi (BANKA İŞLEMLERİ / IF) !!!\n");
+
+        System.out.println("Merhabalar, Kodluyoruz bankasına Hoşgeldiniz!");
+
+        while (kalanHak1 > 0) {
+            System.out.print("Kullanıcı Adınız: ");
+            kullaniciAdi1 = input.nextLine();
+            System.out.print("Şifreniz: ");
+            sifre1 = input.nextLine();
+            if (kullaniciAdi1.equals("Patika") && sifre1.equals("Dev123")) {
+                System.out.println("Sisteme başarılı bir şekilde giriş yaptınız.");
+
+                do {
+                    System.out.println("1 - Bakiye Sorgulama\n" +
+                            "2 - Para Yatırma\n" +
+                            "3 - Para Çekme\n" +
+                            "4 - Çıkış Yap\n");
+                    System.out.print("Lütfen yapmak istediğiniz işlemi seçiniz: ");
+                    islem1 = input.nextInt();
+
+                    if (islem1 == 1) {
+                        System.out.println("Bakiyeniz: " + bakiye1);
+                    } else if (islem1 == 2) {
+                        System.out.print("Lütfen yatırmak istediğiniz para miktarını giriniz: ");
+                        paraMiktari1 = input.nextInt();
+                        bakiye1 += paraMiktari1;
+                        System.out.println("Bakiyeniz: " + bakiye1);
+                    } else if (islem1 == 3) {
+                        System.out.print("Lütfen çekmek istediğiniz para miktarını giriniz: ");
+                        paraMiktari1 = input.nextInt();
+                        if (paraMiktari1 > bakiye1) {
+                            System.out.println("Bakiyeniz yetersiz.");
+                        } else {
+                            bakiye1 -= paraMiktari1;
+                            System.out.println("Bakiyeniz: " + bakiye1);
+                        }
+                    }
+                } while (islem1 != 4);
+                System.out.println("İyi günler dileriz.");
+                break;
+            } else {
+                System.out.println("Hatalı kullanıcı adı veya şifre girişi. Kalan hakkınız: " + --kalanHak1);
+                if (kalanHak1 == 0) {
+                    System.out.println("Hesabınız bloke edilmiştir.");
+                }
+            }
+        }
+
+        //ATM Projesi (Banka işlemleri / Switch-Case)
+        System.out.println("\n!!! ATM Projesi (BANKA İŞLEMLERİ / SWITCH-CASE) !!!\n");
+
+        System.out.println("Merhabalar, Kodluyoruz bankasına Hoşgeldiniz!");
+
+
+        while (kalanHak2 > 0) {
+            System.out.print("Kullanıcı Adınız: ");
+            kullaniciAdi2 = input.nextLine();
+            System.out.print("Şifreniz: ");
+            sifre2 = input.nextLine();
+            if (kullaniciAdi2.equals("Patika") && sifre2.equals("Dev123")) {
+                System.out.println("Sisteme başarılı bir şekilde giriş yaptınız.");
+
+
+                System.out.println("1 - Bakiye Sorgulama\n" +
+                        "2 - Para Yatırma\n" +
+                        "3 - Para Çekme\n" +
+                        "4 - Çıkış Yap\n");
+                System.out.print("Lütfen yapmak istediğiniz işlemi seçiniz: ");
+                islem2 = input.nextInt();
+
+                do {
+                    switch (islem2) {
+                        case 1:
+                            System.out.println("Bakiyeniz: " + bakiye2);
+
+                            System.out.println("1 - Bakiye Sorgulama\n" +
+                                    "2 - Para Yatırma\n" +
+                                    "3 - Para Çekme\n" +
+                                    "4 - Çıkış Yap\n");
+                            System.out.print("Lütfen yapmak istediğiniz işlemi seçiniz: ");
+                            islem2 = input.nextInt();
+                            break;
+
+                        case 2:
+                            System.out.print("Lütfen yatırmak istediğiniz para miktarını giriniz: ");
+                            paraMiktari2 = input.nextInt();
+                            bakiye2 += paraMiktari2;
+                            System.out.println("Bakiyeniz: " + bakiye2);
+
+                            System.out.println("1 - Bakiye Sorgulama\n" +
+                                    "2 - Para Yatırma\n" +
+                                    "3 - Para Çekme\n" +
+                                    "4 - Çıkış Yap\n");
+                            System.out.print("Lütfen yapmak istediğiniz işlemi seçiniz: ");
+                            islem2 = input.nextInt();
+                            break;
+
+                        case 3:
+                            System.out.print("Lütfen çekmek istediğiniz para miktarını giriniz: ");
+                            paraMiktari2 = input.nextInt();
+                            if (paraMiktari2 > bakiye2) {
+                                System.out.println("Bakiyeniz yetersiz.");
+                            } else {
+                                bakiye2 -= paraMiktari2;
+                                System.out.println("Bakiyeniz: " + bakiye2);
+                            }
+
+                            System.out.println("1 - Bakiye Sorgulama\n" +
+                                    "2 - Para Yatırma\n" +
+                                    "3 - Para Çekme\n" +
+                                    "4 - Çıkış Yap\n");
+                            System.out.print("Lütfen yapmak istediğiniz işlemi seçiniz: ");
+                            islem2 = input.nextInt();
+                            break;
+
+                        case 4:
+                            break;
+
+                        default:
+                            System.out.println("1 - Bakiye Sorgulama\n" +
+                                    "2 - Para Yatırma\n" +
+                                    "3 - Para Çekme\n" +
+                                    "4 - Çıkış Yap\n");
+                            System.out.print("Lütfen yapmak istediğiniz işlemi seçiniz: ");
+                            islem2 = input.nextInt();
+
+                    }
+                } while (islem2 != 4);
+                System.out.print("İyi günler dileriz.");
+                break;
+
+            } else {
+                System.out.println("Hatalı kullanıcı adı veya şifre girişi. Kalan hakkınız: " + --kalanHak2);
+                if (kalanHak2 == 0) {
+                    System.out.println("Hesabınız bloke edilmiştir.");
+                }
+            }
+        }
+    }
+}
 
 ```
 </details>
