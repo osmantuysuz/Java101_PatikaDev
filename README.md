@@ -21,9 +21,9 @@ Bu README dosyasında bu eğitimdeki pratik ve ödevlerin cevaplarını bulacaks
 | [PRATİK 12](https://github.com/osmantuysuz/Java101_PatikaDev#brain-prati̇k-12---girilen-sayılardan-çift-sayıları-bulan-program) - Girilen Sayılardan Çift Sayıları Bulan Program | [ÖDEV 12](https://github.com/osmantuysuz/Java101_PatikaDev#brain-ödev-12---asal-sayı-bulan-program-recursive-metot) - Asal Sayı Bulan Program (Recursive Metot) |
 | [PRATİK 13](https://github.com/osmantuysuz/Java101_PatikaDev#brain-prati̇k-13---tek-sayıların-toplamını-bulan-program) - Tek Sayıların Toplamını Bulan Program | [ÖDEV 13](https://github.com/osmantuysuz/Java101_PatikaDev#brain-ödev-13---desene-göre-metot-oluşturma-recursive-metot) - Desene Göre Metot Oluşturma (Recursive Metot) |
 | [PRATİK 14](https://github.com/osmantuysuz/Java101_PatikaDev#brain-prati̇k-14---girilen-sayıdan-küçük-2nin-kuvvetlerini-bulan-program) - Girilen Sayıdan Küçük 2'nin Kuvvetlerini Bulan Program | [ÖDEV 14](https://github.com/osmantuysuz/Java101_PatikaDev#brain-ödev-14---maaş-hesaplayıcı) - Maaş Hesaplayıcı |
-| [PRATİK 15](https://github.com/osmantuysuz/Java101_PatikaDev#brain-prati̇k-15---faktöriyel-hesaplayan-program) - Faktöriyel Hesaplayan Program |
-| [PRATİK 16](https://github.com/osmantuysuz/Java101_PatikaDev#brain-prati̇k-16---üslü-sayı-hesaplayan-program) - Üslü Sayı Hesaplayan Program |
-| [PRATİK 17](https://github.com/osmantuysuz/Java101_PatikaDev#brain-prati̇k-17---armstrong-sayıları-bulan-program) - Armstrong Sayıları Bulan Program |
+| [PRATİK 15](https://github.com/osmantuysuz/Java101_PatikaDev#brain-prati̇k-15---faktöriyel-hesaplayan-program) - Faktöriyel Hesaplayan Program | [ÖDEV 15](https://github.com/osmantuysuz/Java101_PatikaDev#brain-ödev-15---diziyi-küçükten-büyüğe-sıralama) - Diziyi Küçükten Büyüğe Sıralama |
+| [PRATİK 16](https://github.com/osmantuysuz/Java101_PatikaDev#brain-prati̇k-16---üslü-sayı-hesaplayan-program) - Üslü Sayı Hesaplayan Program | [ÖDEV 16]() - Dizideki Elemanların Frekansı |
+| [PRATİK 17](https://github.com/osmantuysuz/Java101_PatikaDev#brain-prati̇k-17---armstrong-sayıları-bulan-program) - Armstrong Sayıları Bulan Program | [ÖDEV 17]() - Matris Transpozunu Bulma |
 | [PRATİK 18](https://github.com/osmantuysuz/Java101_PatikaDev#brain-prati̇k-18---harmonik-sayıları-bulan-program) - Harmonik Sayıları Bulan Program |
 | [PRATİK 19](https://github.com/osmantuysuz/Java101_PatikaDev#brain-prati̇k-19---yıldız-ile-üçgen-yapımı) - Yıldız ile Üçgen Yapımı |
 | [PRATİK 20](https://github.com/osmantuysuz/Java101_PatikaDev#brain-prati̇k-20---atm-projesi) - ATM Projesi |
@@ -3675,6 +3675,79 @@ public class test {
         }
     }
 }
+```
+
+</details>
+
+------------------------------------------------------------------------------------------------------------------------------------
+## :brain: ÖDEV 16 - Dizideki Elemanların Frekansı
+
+### :question: SORU 
+Java dilinde, dizideki elemanların kaç kez tekrar edildiğini yani frekanslarını bulan programı yazınız.
+
+:mag: Senaryo
+```
+Dizi : [10, 20, 20, 10, 10, 20, 5, 20]
+Tekrar Sayıları
+10 sayısı 3 kere tekrar edildi.
+20 sayısı 4 kere tekrar edildi.
+5 sayısı 1 kere tekrar edildi. 
+```
+
+### :green_square: CEVAP
+
+<details>
+<summary>Kodu görmek için tıklayınız.</summary>
+
+```java
+
+```
+
+</details>
+
+------------------------------------------------------------------------------------------------------------------------------------
+## :brain: ÖDEV 17 - Matris Transpozunu Bulma
+
+### :question: SORU 
+Java dilinde, çok boyutlu diziler ile oluşturulmuş matrisin transpozunu bulan programı yazınız.
+
+Matrisin transpozunu (devriğini) almak, matrisin aynı numaralı satırları ile sütunlarının yer değiştirmesi demektir. Bu işlem sonucu elde edilen matris, başlangıçtaki matrisin transpozudur (devriğidir). Bu aşamada kxn’lik bir matrisin transpozu (devriği) nxk’lik bir matris olur. Örneğin bir A matrisimiz olsun. Bu A matrisinin transpozu (devriği), A^T (A üzeri T) ile gösterilir.
+
+Örneğin aşağıdaki 2x3’lik A matrisinin transpozu (devriği), 2x3’lük bir A^T matrisidir.
+
+![A Matrisi](https://raw.githubusercontent.com/Kodluyoruz/taskforce/main/java101/odev-array-transpose/figures/c1.png)
+
+![A Matrisi Transpoze](https://raw.githubusercontent.com/Kodluyoruz/taskforce/main/java101/odev-array-transpose/figures/c2.png)
+
+:mag: Senaryo
+```
+Matris : 
+2    3    4    
+5    6    4    
+Transpoze : 
+2    5    
+3    6    
+4    4    
+```
+
+```
+Matris : 
+1    2    3    
+4    5    6    
+Transpoze : 
+1    4    
+2    5    
+3    6 
+```
+
+
+### :green_square: CEVAP
+
+<details>
+<summary>Kodu görmek için tıklayınız.</summary>
+
+```java
+
 ```
 
 </details>
