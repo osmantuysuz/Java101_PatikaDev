@@ -22,7 +22,7 @@ Bu README dosyasında bu eğitimdeki pratik ve ödevlerin cevaplarını bulacaks
 | [PRATİK 13](https://github.com/osmantuysuz/Java101_PatikaDev#brain-prati̇k-13---tek-sayıların-toplamını-bulan-program) - Tek Sayıların Toplamını Bulan Program | [ÖDEV 13]() - Desene Göre Metot Oluşturma (Recursive Metot) |
 | [PRATİK 14](https://github.com/osmantuysuz/Java101_PatikaDev#brain-prati̇k-14---girilen-sayıdan-küçük-2nin-kuvvetlerini-bulan-program) - Girilen Sayıdan Küçük 2'nin Kuvvetlerini Bulan Program |
 | [PRATİK 15](https://github.com/osmantuysuz/Java101_PatikaDev#brain-prati̇k-15---faktöriyel-hesaplayan-program) - Faktöriyel Hesaplayan Program |
-| [PRATİK 16]() - Üslü Sayı Hesaplayan Program |
+| [PRATİK 16](https://github.com/osmantuysuz/Java101_PatikaDev#brain-prati̇k-16---üslü-sayı-hesaplayan-program) - Üslü Sayı Hesaplayan Program |
 | [PRATİK 17]() - Armstrong Sayıları Bulan Program |
 | [PRATİK 18]() - Harmonik Sayıları Bulan Program |
 | [PRATİK 19]() - Yıldız ile Üçgen Yapımı |
