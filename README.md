@@ -23,7 +23,7 @@ Bu README dosyasında bu eğitimdeki pratik ve ödevlerin cevaplarını bulacaks
 | [PRATİK 14](https://github.com/osmantuysuz/Java101_PatikaDev#brain-prati̇k-14---girilen-sayıdan-küçük-2nin-kuvvetlerini-bulan-program) - Girilen Sayıdan Küçük 2'nin Kuvvetlerini Bulan Program |
 | [PRATİK 15](https://github.com/osmantuysuz/Java101_PatikaDev#brain-prati̇k-15---faktöriyel-hesaplayan-program) - Faktöriyel Hesaplayan Program |
 | [PRATİK 16](https://github.com/osmantuysuz/Java101_PatikaDev#brain-prati̇k-16---üslü-sayı-hesaplayan-program) - Üslü Sayı Hesaplayan Program |
-| [PRATİK 17]() - Armstrong Sayıları Bulan Program |
+| [PRATİK 17](https://github.com/osmantuysuz/Java101_PatikaDev#brain-prati̇k-17---armstrong-sayıları-bulan-program) - Armstrong Sayıları Bulan Program |
 | [PRATİK 18]() - Harmonik Sayıları Bulan Program |
 | [PRATİK 19]() - Yıldız ile Üçgen Yapımı |
 | [PRATİK 20]() - ATM Projesi |
