@@ -1067,8 +1067,6 @@ Java ile kullanıcının girdiği değerler ile üslü sayı hesaplayan program�
 <summary>Kodu görmek için tıklayınız.</summary>
 
 ```java
-package Pratik16;
-
 import java.util.Scanner;
 
 public class UsluSayiHesaplayanProgram {
@@ -1106,6 +1104,332 @@ public class UsluSayiHesaplayanProgram {
         System.out.println(sayi2 + "^" + kuvvet2 + ": " + snc2);
     }
 }
+```
+</details>
+
+------------------------------------------------------------------------------------------------------------------------------------
+## :brain: PRATİK 17 - Armstrong Sayıları Bulan Program
+
+### :question: SORU 
+Java döngüler ile sayının armstrong sayı olup olmadığını bulan programı yazıyoruz.
+
+:mag: Armstrong Sayı Nedir ?
+N haneli bir sayının basamaklarının n’inci üstlerinin toplamı, sayının kendisine eşitse, böyle sayılara Armstrong sayı denir.
+
+Örneğin 407 sayısını ele alalım. (4^3)+ (0^3)+(7^3) = 64+0+343 = 407 sonucunu verir. Bu da 407 sayısının armstrong bir sayı olduğunu gösterir.
+
+1342 sayısına da bakalım. (1^4)+(3^4)+(4^4)+(2^4) =1+81+256+16=354 sayısı 1342’ye eşit olmadığı için armstrong sayı olmaz.
+
+1634=1^4+6^4+3^4+4^4=1+1296+81+256=1634
+
+54748=5^5+4^5+7^5+4^5+8^5=3125+1024+16807+1024+32768=54748
+
+:pill: Örnek Çalışma Kodu
+```java
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Sayı Giriniz :");
+        int number = input.nextInt();
+        int basNumber = 0;
+        int tempNumber = number;
+        int basValue;
+        int result = 0;
+        int basPow;
+
+        while (tempNumber != 0) {
+            tempNumber /= 10;
+            basNumber++;
+        }
+
+        tempNumber = number;
+        while (tempNumber != 0) {
+            basValue = tempNumber % 10;
+            // 1*1*1*1 = 1^4
+            basPow = 1;
+            for (int i = 1; i <= basNumber; i++) {
+                basPow *= basValue;
+            }
+            result += basPow;
+            tempNumber /= 10;
+        }
+
+        if (result == number) {
+            System.out.println(number + " sayısı bir Armstrong sayıdır.");
+        } else {
+            System.out.println(number + " sayısı bir Armstrong sayısı değildir.");
+        }
+
+
+        /*
+        int a = 2451, basamakSayisi = 0, numberCounter = 0;
+
+        // Basamak Sayısı Bulma İşlemi
+        // 2451 / 10 = 245
+        // 245 / 10 = 24
+        // 24 / 10 = 2
+        // 2 / 10 = 0
+        // 0 / 10 = 0
+
+        while (a != 0) {
+            a /= 10;
+            numberCounter++;
+        }
+
+        // Bir sayının son basamağını bulma
+        // 2451 % 10 = 1
+        int b = 2451;
+        int c = b % 10;
+
+        int sub = 2, sup = 3;
+        int result = 1;
+        for (int i = 1; i <= sup; i++ ){
+            result *= sub;
+        }
+        System.out.println(result);
+
+         */
+
+    }
+}
+```
+
+### :green_square: CEVAP
+
+<details>
+<summary>Kodu görmek için tıklayınız.</summary>
+
+```java
+package Pratik17;
+
+import java.util.Scanner;
+
+public class ArmstrongSayilariBulanProgram {
+    public static void main(String[] args) {
+        int sayi1, bsmkSay1 = 0, hafizaSay1;
+        Scanner input = new Scanner(System.in);
+
+        //Armstrong Sayıları Bulan Program
+        System.out.print("\n!!! ARMSTRONG SAYILARI BULAN PROGRAM !!!\n");
+
+        System.out.print("Lütfen bir sayı giriniz: ");
+        sayi1 = input.nextInt();
+        hafizaSay1 = sayi1;
+
+        for (int x = 0; sayi1 != 0; x++) {
+            sayi1 = sayi1 / 10;
+            bsmkSay1++;
+        }
+
+        sayi1 = hafizaSay1;
+
+        int bsmkMod1, bsmkDeger1, mod1 = 10, bolum1 = 1, gToplam1 = 1, sonuc1 = 0;
+
+        for (int y = 1; y <= bsmkSay1; y++) {
+            bsmkMod1 = sayi1 % mod1;
+            bsmkDeger1 = bsmkMod1 / bolum1;
+            mod1 *= 10;
+            bolum1 *= 10;
+
+            for (int z = 1; z <= bsmkSay1; z++) {
+                gToplam1 *= bsmkDeger1;
+            }
+
+            sonuc1 += gToplam1;
+            gToplam1 = 1;
+        }
+        if (sayi1 == sonuc1) {
+            System.out.println(sayi1 + " bir armstrong sayıdır.");
+        } else {
+            System.out.println(sayi1 + " bir armstrong sayıdır değildir !!!");
+        }
+
+
+        //Basamak Sayılarının Toplamını Hesaplayan Program
+        System.out.print("\n!!! BASAMAK SAYILARININ TOPLAMINI HESAPLAYAN PROGRAM !!!\n");
+
+        int sayi2, bsmkSay2 = 0, hafizaSay2;
+
+        System.out.print("Lütfen bir sayı giriniz: ");
+        sayi2 = input.nextInt();
+        hafizaSay2 = sayi2;
+
+        for (int x = 0; sayi2 != 0; x++) {
+            sayi2 = sayi2 / 10;
+            bsmkSay2++;
+        }
+
+        sayi2 = hafizaSay2;
+
+        int bsmkMod2, bsmkDeger2, mod2 = 10, bolum2 = 1, sonuc2 = 0;
+
+        for (int y = 1; y <= bsmkSay2; y++) {
+            bsmkMod2 = sayi2 % mod2;
+            bsmkDeger2 = bsmkMod2 / bolum2;
+            mod2 *= 10;
+            bolum2 *= 10;
+
+            sonuc2 += bsmkDeger2;
+
+        }
+
+        System.out.print("Basamak Sayılarının Toplamı: " + sonuc2);
+    }
+}
+```
+</details>
+
+------------------------------------------------------------------------------------------------------------------------------------
+## :brain: PRATİK 18 - Harmonik Sayıları Bulan Program
+
+### :question: SORU 
+
+
+:mag:
+### :green_square: CEVAP
+
+<details>
+<summary>Kodu görmek için tıklayınız.</summary>
+
+```java
+
+```
+</details>
+
+------------------------------------------------------------------------------------------------------------------------------------
+## :brain: PRATİK 19 - Yıldız ile Üçgen Yapımı
+
+### :question: SORU 
+
+
+:mag:
+### :green_square: CEVAP
+
+<details>
+<summary>Kodu görmek için tıklayınız.</summary>
+
+```java
+
+```
+</details>
+
+------------------------------------------------------------------------------------------------------------------------------------
+## :brain: PRATİK 20 - ATM Projesi
+
+### :question: SORU 
+
+
+:mag:
+### :green_square: CEVAP
+
+<details>
+<summary>Kodu görmek için tıklayınız.</summary>
+
+```java
+
+```
+</details>
+
+------------------------------------------------------------------------------------------------------------------------------------
+## :brain: PRATİK 21 - EBOB ve EKOK Bulan Program
+
+### :question: SORU 
+
+
+:mag:
+### :green_square: CEVAP
+
+<details>
+<summary>Kodu görmek için tıklayınız.</summary>
+
+```java
+
+```
+</details>
+
+------------------------------------------------------------------------------------------------------------------------------------
+## :brain: PRATİK 22 - Palindrom Sayılar
+
+### :question: SORU 
+
+
+:mag:
+### :green_square: CEVAP
+
+<details>
+<summary>Kodu görmek için tıklayınız.</summary>
+
+```java
+
+```
+</details>
+
+------------------------------------------------------------------------------------------------------------------------------------
+## :brain: PRATİK 23 - Recursive Fibonacci Serisi Bulan Program
+
+### :question: SORU 
+
+
+:mag:
+### :green_square: CEVAP
+
+<details>
+<summary>Kodu görmek için tıklayınız.</summary>
+
+```java
+
+```
+</details>
+
+------------------------------------------------------------------------------------------------------------------------------------
+## :brain: PRATİK 24 - Gelişmiş Hesap Makinesi
+
+### :question: SORU 
+
+
+:mag:
+### :green_square: CEVAP
+
+<details>
+<summary>Kodu görmek için tıklayınız.</summary>
+
+```java
+
+```
+</details>
+
+------------------------------------------------------------------------------------------------------------------------------------
+## :brain: PRATİK 25 - Öğrenci Bilgi Sistemi
+
+### :question: SORU 
+
+
+:mag:
+### :green_square: CEVAP
+
+<details>
+<summary>Kodu görmek için tıklayınız.</summary>
+
+```java
+
+```
+</details>
+
+------------------------------------------------------------------------------------------------------------------------------------
+## :brain: PRATİK 26 - Boks Oyunu
+
+### :question: SORU 
+
+
+:mag:
+### :green_square: CEVAP
+
+<details>
+<summary>Kodu görmek için tıklayınız.</summary>
+
+```java
 
 ```
 </details>
