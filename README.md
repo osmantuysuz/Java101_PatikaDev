@@ -33,10 +33,10 @@ Bu README dosyasında bu eğitimdeki pratik ve ödevlerin cevaplarını bulacaks
 | [PRATİK 24](https://github.com/osmantuysuz/Java101_PatikaDev#brain-prati̇k-24---gelişmiş-hesap-makinesi) - Gelişmiş Hesap Makinesi |
 | [PRATİK 25](https://github.com/osmantuysuz/Java101_PatikaDev#brain-prati̇k-25---öğrenci-bilgi-sistemi) - Öğrenci Bilgi Sistemi |
 | [PRATİK 26](https://github.com/osmantuysuz/Java101_PatikaDev#brain-prati̇k-26---boks-oyunu) - Boks Oyunu |
-| [PRATİK 27]() - Dizideki Elemanların Ortalamasını Bulan Program |
-| [PRATİK 28]() - Dizideki Maksimum ve Minimum Değerleri Bulan Program |
-| [PRATİK 29]() - Çok Boyutlu Diziler ile A Harfi Yazdıran Program |
-| [PRATİK 30]() - Dizideki Tekrar Eden Sayıları Bulan Program |
+| [PRATİK 27](https://github.com/osmantuysuz/Java101_PatikaDev#brain-prati̇k-27---dizideki-elemanların-ortalamasını-bulan-program) - Dizideki Elemanların Ortalamasını Bulan Program |
+| [PRATİK 28](https://github.com/osmantuysuz/Java101_PatikaDev#brain-prati̇k-28---dizideki-maksimum-ve-minimum-değerleri-bulan-program) - Dizideki Maksimum ve Minimum Değerleri Bulan Program |
+| [PRATİK 29](https://github.com/osmantuysuz/Java101_PatikaDev#brain-prati̇k-29---çok-boyutlu-diziler-ile-a-harfi-yazdıran-program) - Çok Boyutlu Diziler ile A Harfi Yazdıran Program |
+| [PRATİK 30](https://github.com/osmantuysuz/Java101_PatikaDev#brain-prati̇k-30---dizideki-tekrar-eden-sayıları-bulan-program) - Dizideki Tekrar Eden Sayıları Bulan Program |
 ------------------------------------------------------------------------------------------------------------------------------------
 ## :brain: PRATİK 1 - Not Ortalaması
 
@@ -2494,9 +2494,7 @@ public class test {
 ## :brain: PRATİK 28 - Dizideki Maksimum ve Minimum Değerleri Bulan Program
 
 ### :question: SORU 
-
-:pill: 
-
+Dizideki elemanlardan min ve max olanları bulma.
 
 ### :green_square: CEVAP
 
@@ -2504,7 +2502,23 @@ public class test {
 <summary>Kodu görmek için tıklayınız.</summary>
 
 ```java
+public class test {
+    public static void main(String[] args) {
+        int[] list = {56, 34, 1, 8, 101, -2, -33};
+        int min=list[0];
+        int max=list[0];
 
+        for (int i: list) {
+            if (i<min)
+                min=i;
+            if (i>max)
+                max=i;
+        }
+
+        System.out.println("Min: " + min);
+        System.out.println("Max: " + max);
+    }
+}
 ```
 </details>
 
