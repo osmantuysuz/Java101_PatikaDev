@@ -892,6 +892,62 @@ public class test {
 </details>
 
 ------------------------------------------------------------------------------------------------------------------------------------
+## :brain: PRATİK 13 - Tek Sayıların Toplamını Bulan Program
+
+### :question: SORU 
+Java döngüler ile negatif bir değer girilene kadar kullanıcıdan girişleri kabul eden ve girilen değerlerden tek sayıları toplayıp ekrana basan programı yazıyoruz.
+
+:warning: Java döngüler ile tek bir sayı girilene kadar kullanıcıdan girişleri kabul eden ve girilen değerlerden çift ve 4'ün katları olan sayıları toplayıp ekrana basan programı yazıyoruz.
+
+### :green_square: CEVAP
+
+<details>
+<summary>Kodu görmek için tıklayınız.</summary>
+
+```java
+import java.util.Scanner;
+
+public class test {
+    public static void main(String[] args) {
+        //Değişkenleri tanımlayalım.
+        int girilenSayi1=0, toplam=0, girilenSayi2=0;
+
+        //Bir döngü ile bu sayıları negatif değer girilene kadar alıp içinden tek olanları toplayalım
+        while (girilenSayi1>=0) {
+            //Kullanıcıdan sayıyı alalım.
+            Scanner input = new Scanner(System.in);
+            System.out.print("Lütfen sayıyı giriniz: ");
+            girilenSayi1=input.nextInt();
+            if (girilenSayi1%2==1)
+                toplam=toplam+girilenSayi1;
+            else
+                continue;
+        }
+        System.out.println("Girilen Tek Sayıların Toplamı: " + toplam);
+        System.out.println("Diğer Programa Geçildi.");
+
+
+        toplam=0;
+        //tek bir sayı girilene kadar kullanıcıdan girişleri kabul eden ve girilen değerlerden çift ve 4'ün katları olan sayıları toplayıp ekrana basan programı yazıyoruz.
+        while (girilenSayi2%2==0){
+            //Kullanıcıdan sayıyı alalım.
+            Scanner input = new Scanner(System.in);
+            System.out.print("Lütfen sayıyı giriniz: ");
+            girilenSayi2=input.nextInt();
+            if (girilenSayi2%4==0){
+                toplam=girilenSayi2+toplam;
+            }else
+                continue;
+        }
+        System.out.println("Girilen sayılardan 4'ün katları toplamı: " + toplam);
+    }
+}
+
+
+```
+</details>
+
+------------------------------------------------------------------------------------------------------------------------------------
 
 ## :brain: ÖDEV 1 - Vücut Kitle İndeksi Hesaplama
 
