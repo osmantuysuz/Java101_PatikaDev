@@ -3614,3 +3614,69 @@ public class Employee {
 </details>
 
 ------------------------------------------------------------------------------------------------------------------------------------
+## :brain: ÖDEV 15 - Diziyi Küçükten Büyüğe Sıralama
+
+### :question: SORU 
+Java dilinde, dizideki elemanları küçükten büyüğe sıralayan programı yazınız. Dizinin boyutunu ve dizinin elemanlarını kullanıcıdan alınız.
+
+:mag: Senaryo
+```
+Dizinin boyutu n : 5
+Dizinin elemanlarını giriniz :
+1. Elemanı : 99
+2. Elemanı : -2
+3. Elemanı : -2121
+4. Elemanı : 1
+5. Elemanı : 0
+Sıralama : -2121 -2 0 1 99 
+```
+
+```
+Dizinin boyutu n : 6
+Dizinin elemanlarını giriniz :
+1. Elemanı : 1000221
+2. Elemanı : 22
+3. Elemanı : -1
+4. Elemanı : 999
+5. Elemanı : 0
+6. Elemanı : 254
+Sıralama : -1 0 22 254 999 1000221 
+```
+
+
+### :green_square: CEVAP
+
+<details>
+<summary>Kodu görmek için tıklayınız.</summary>
+
+```java
+import java.sql.Array;
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class test {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int diziUzunluk;
+
+        System.out.print("Dizi boyutunu giriniz: ");
+        diziUzunluk=input.nextInt();
+        int[] dizi= new int[diziUzunluk];
+        for (int i = 0; i<diziUzunluk; i++){
+            System.out.print((i+1) + ". elemanı giriniz: ");
+            dizi[i]=input.nextInt();
+        }
+
+        Arrays.sort(dizi);
+
+        System.out.print("Sıralandıktan sonra dizi: ");
+        for (int i :dizi){
+            System.out.print(i+" ");
+        }
+    }
+}
+```
+
+</details>
+
+------------------------------------------------------------------------------------------------------------------------------------
