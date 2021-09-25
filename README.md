@@ -948,6 +948,51 @@ public class test {
 </details>
 
 ------------------------------------------------------------------------------------------------------------------------------------
+## :brain: PRATİK 14 - Girilen Sayıdan Küçük 2'nin Kuvvetlerini Bulan Program
+
+### :question: SORU 
+Java döngüler ile girilen sayıya kadar olan 2'nin kuvvetlerini ekrana yazdıran programı yazıyoruz.
+
+:warning: Java döngüler ile girilen sayıya kadar olan 4 ve 5'in kuvvetlerini ekrana yazdıran programı yazıyoruz.
+
+### :green_square: CEVAP
+
+<details>
+<summary>Kodu görmek için tıklayınız.</summary>
+
+```java
+import java.util.Scanner;
+
+public class test {
+    public static void main(String[] args) {
+        //Değişkenleri tanımlayalım.
+        int girilenSayi1=0;
+
+        //Kullanıcıdan sayıyı alalım.
+        Scanner input = new Scanner(System.in);
+        System.out.print("Lütfen sayıyı giriniz: ");
+        girilenSayi1=input.nextInt();
+
+        //Bir döngü ile 2'nin kuvvetlerini bulup ekrana yazdıralım
+        for (int i=1; i<=girilenSayi1; i=i*2){
+            System.out.println(i);
+        }
+
+        //Java döngüler ile girilen sayıya kadar olan 4 ve 5'in kuvvetlerini ekrana yazdıran programı yazıyoruz.
+        for (int i=1; i<=girilenSayi1; i=i*4){
+            System.out.println("4'ün kuvvetleri: " + i);
+        }
+        for (int i=1; i<=girilenSayi1; i=i*5){
+            System.out.println("5'ün kuvvetleri: " + i);
+        }
+    }
+}
+
+
+```
+</details>
+
+------------------------------------------------------------------------------------------------------------------------------------
 
 ## :brain: ÖDEV 1 - Vücut Kitle İndeksi Hesaplama
 
