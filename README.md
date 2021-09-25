@@ -2854,7 +2854,20 @@ public class FibonacciSerisi {
 ## :brain: ÖDEV 11 - Üs Hesabı Yapan Program (Recursive Metot)
 
 ### :question: SORU 
+Java dilinde, taban ve üs değerleri kullanıcıdan alınan üs alma işlemini "Recursive" metot kullanarak yapan programı yazınız.
 
+:mag: Senaryo
+```
+Taban değeri giriniz :2
+Üs değerini giriniz : 0
+Sonuç : 1
+Taban değeri giriniz : 2
+Üs değerini giriniz : 3
+Sonuç : 8
+Taban değeri giriniz : 5
+Üs değerini giriniz : 3
+Sonuç : 125
+```
 
 ### :green_square: CEVAP
 
@@ -2862,6 +2875,36 @@ public class FibonacciSerisi {
 <summary>Kodu görmek için tıklayınız.</summary>
 
 ```java
+package Odev11;
+
+import java.util.Scanner;
+
+public class UsHesabiYapanProgram {
+
+    static int us(int taban, int us) {
+
+        if (us != 0) {
+            return taban*us(taban, us-1);
+        } else {
+            return 1;
+        }
+    }
+
+    public static void main(String[] args) {
+
+        int us, taban;
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Taban değeri giriniz: ");
+        taban = input.nextByte();
+
+        System.out.print("Üs değeri giriniz: ");
+        us = input.nextByte();
+
+        System.out.println("Sonuç: " + us(taban, us)); // Test etmek için sayı değerini değiştirin.
+
+    }
+}
 
 ```
 </details>
