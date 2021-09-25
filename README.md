@@ -1202,8 +1202,6 @@ public class Main {
 <summary>Kodu görmek için tıklayınız.</summary>
 
 ```java
-package Pratik17;
-
 import java.util.Scanner;
 
 public class ArmstrongSayilariBulanProgram {
@@ -1285,16 +1283,33 @@ public class ArmstrongSayilariBulanProgram {
 ## :brain: PRATİK 18 - Harmonik Sayıları Bulan Program
 
 ### :question: SORU 
+Java ile girilen sayının harmonik serisini bulan program yazacağız.
 
-
-:mag:
+:pill: Harmonik Seri Formülü :
+![Harmonik Seri Formulü](https://raw.githubusercontent.com/Kodluyoruz/taskforce/main/java101/pratik-harmonic/figures/harmonic_series.gif)
+ 
 ### :green_square: CEVAP
 
 <details>
 <summary>Kodu görmek için tıklayınız.</summary>
 
 ```java
+import java.util.Scanner;
 
+public class HarmonikSeriBulanProgram {
+    public static void main(String[] args) {
+        double n, toplam = 0;
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Harmonik serisini bulmak istediğiniz sayıyı (n) giriniz: ");
+        n = input.nextInt();
+
+        for (double x = 1; x <= n; x++) {
+            toplam += 1 / x;
+        }
+        System.out.print("Cevap: " + toplam);
+    }
+}
 ```
 </details>
 
