@@ -27,12 +27,12 @@ Bu README dosyasında bu eğitimdeki pratik ve ödevlerin cevaplarını bulacaks
 | [PRATİK 18](https://github.com/osmantuysuz/Java101_PatikaDev#brain-prati̇k-18---harmonik-sayıları-bulan-program) - Harmonik Sayıları Bulan Program |
 | [PRATİK 19](https://github.com/osmantuysuz/Java101_PatikaDev#brain-prati̇k-19---yıldız-ile-üçgen-yapımı) - Yıldız ile Üçgen Yapımı |
 | [PRATİK 20](https://github.com/osmantuysuz/Java101_PatikaDev#brain-prati̇k-20---atm-projesi) - ATM Projesi |
-| [PRATİK 21]() - EBOB ve EKOK Bulan Program |
-| [PRATİK 22]() - Palindrom Sayılar |
-| [PRATİK 23]() - Recursive ile Fibonacci Serisi |
-| [PRATİK 24]() - Gelişmiş Hesap Makinesi |
-| [PRATİK 25]() - Öğrenci Bilgi Sistemi |
-| [PRATİK 26]() - Boks Oyunu |
+| [PRATİK 21](https://github.com/osmantuysuz/Java101_PatikaDev#brain-prati̇k-21---ebob-ve-ekok-bulan-program) - EBOB ve EKOK Bulan Program |
+| [PRATİK 22](https://github.com/osmantuysuz/Java101_PatikaDev#brain-prati̇k-22---palindrom-sayılar) - Palindrom Sayılar |
+| [PRATİK 23](https://github.com/osmantuysuz/Java101_PatikaDev#brain-prati̇k-23---recursive-fibonacci-serisi-bulan-program) - Recursive ile Fibonacci Serisi |
+| [PRATİK 24](https://github.com/osmantuysuz/Java101_PatikaDev#brain-prati̇k-24---gelişmiş-hesap-makinesi) - Gelişmiş Hesap Makinesi |
+| [PRATİK 25](https://github.com/osmantuysuz/Java101_PatikaDev#brain-prati̇k-25---öğrenci-bilgi-sistemi) - Öğrenci Bilgi Sistemi |
+| [PRATİK 26](https://github.com/osmantuysuz/Java101_PatikaDev#brain-prati̇k-26---boks-oyunu) - Boks Oyunu |
 ------------------------------------------------------------------------------------------------------------------------------------
 ## :brain: PRATİK 1 - Not Ortalaması
 
@@ -2125,6 +2125,134 @@ public class test {
     }
 }
 
+
+```
+</details>
+
+------------------------------------------------------------------------------------------------------------------------------------
+## :brain: ÖDEV 6 - Girilen Sayılardan Min ve Max Değerli Bulan Program
+
+### :question: SORU 
+
+
+### :green_square: CEVAP
+
+<details>
+<summary>Kodu görmek için tıklayınız.</summary>
+
+```java
+
+```
+</details>
+
+------------------------------------------------------------------------------------------------------------------------------------
+## :brain: ÖDEV 7 - Mükemmel Sayı Bulan Program
+
+### :question: SORU 
+
+
+### :green_square: CEVAP
+
+<details>
+<summary>Kodu görmek için tıklayınız.</summary>
+
+```java
+
+```
+</details>
+
+------------------------------------------------------------------------------------------------------------------------------------
+## :brain: ÖDEV 8 - Ters Üçgen Yapımı
+
+### :question: SORU 
+
+
+### :green_square: CEVAP
+
+<details>
+<summary>Kodu görmek için tıklayınız.</summary>
+
+```java
+
+```
+</details>
+
+------------------------------------------------------------------------------------------------------------------------------------
+## :brain: ÖDEV 9 - 1-100 Arasındaki Asal Sayıları Bulan Program
+
+### :question: SORU 
+
+
+### :green_square: CEVAP
+
+<details>
+<summary>Kodu görmek için tıklayınız.</summary>
+
+```java
+
+```
+</details>
+
+------------------------------------------------------------------------------------------------------------------------------------
+## :brain: ÖDEV 10 - Fibonacci Serisi
+
+### :question: SORU 
+
+
+### :green_square: CEVAP
+
+<details>
+<summary>Kodu görmek için tıklayınız.</summary>
+
+```java
+
+```
+</details>
+
+------------------------------------------------------------------------------------------------------------------------------------
+## :brain: ÖDEV 11 - Üs Hesabı Yapan Program (Recursive Metot)
+
+### :question: SORU 
+
+
+### :green_square: CEVAP
+
+<details>
+<summary>Kodu görmek için tıklayınız.</summary>
+
+```java
+
+```
+</details>
+
+------------------------------------------------------------------------------------------------------------------------------------
+## :brain: ÖDEV 12 - Asal Sayı Bulan Program (Recursive Metot)
+
+### :question: SORU 
+
+
+### :green_square: CEVAP
+
+<details>
+<summary>Kodu görmek için tıklayınız.</summary>
+
+```java
+
+```
+</details>
+
+------------------------------------------------------------------------------------------------------------------------------------
+## :brain: ÖDEV 13 - Desene Göre Metot Oluşturma (Recursive Metot)
+
+### :question: SORU 
+
+
+### :green_square: CEVAP
+
+<details>
+<summary>Kodu görmek için tıklayınız.</summary>
+
+```java
 
 ```
 </details>
