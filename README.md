@@ -1801,16 +1801,361 @@ public class RecursiveFibonacciSerisi {
 ## :brain: PRATİK 24 - Gelişmiş Hesap Makinesi
 
 ### :question: SORU 
+Java ile kullanıcın seçtiği işlemleri yapan hesap makinesi yapıyoruz.
+
+:pill: Hesap makinesinin fonksiyonları :
+```
+1- Toplama İşlemi
+2- Çıkarma İşlemi
+3- Çarpma İşlemi
+4- Bölme işlemi
+5- Üslü Sayı Hesaplama
+6- Faktoriyel Hesaplama
+7- Mod Alma
+8- Dikdörtgen Alan ve Çevre Hesabı
+```
+
+:mag: Örnek Kod: 
+```java
+import java.util.Scanner;
+
+public class JavaPatika {
+
+    static void plus() {
+        Scanner scan = new Scanner(System.in);
+        int number, result = 0, i = 1;
+        while (true) {
+            System.out.print(i++ + ". sayı :");
+            number = scan.nextInt();
+            if (number == 0) {
+                break;
+            }
+            result += number;
+        }
+        System.out.println("Sonuç : " + result);
+    }
+
+    static void minus() {
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Kaç adet sayı gireceksiniz :");
+        int counter = scan.nextInt();
+        int number, result = 0;
+
+        for (int i = 1; i <= counter; i++) {
+            System.out.print(i + ". sayı :");
+            number = scan.nextInt();
+            if (i == 1) {
+                result += number;
+                continue;
+            }
+            result -= number;
+        }
+
+        System.out.println("Sonuç : " + result);
+    }
+
+    static void times() {
+        Scanner scan = new Scanner(System.in);
+        int number, result = 1, i = 1;
+
+        while (true) {
+            System.out.print(i++ + ". sayı :");
+            number = scan.nextInt();
+
+            if (number == 1)
+                break;
+
+            if (number == 0) {
+                result = 0;
+                break;
+            }
+            result *= number;
+        }
+
+        System.out.println("Sonuç : " + result);
+    }
+
+    static void divided() {
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Kaç adet sayı gireceksiniz :");
+        int counter = scan.nextInt();
+        double number, result = 0.0;
+
+        for (int i = 1; i <= counter; i++) {
+            System.out.print(i + ". sayı :");
+            number = scan.nextDouble();
+            if (i != 1 && number == 0) {
+                System.out.println("Böleni 0 giremezsiniz.");
+                continue;
+            }
+            if (i == 1) {
+                result = number;
+                continue;
+            }
+            result /= number;
+        }
+
+        System.out.println("Sonuç : " + result);
+    }
+
+    static void power() {
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Taban değeri giriniz :");
+        int base = scan.nextInt();
+        System.out.print("Üs değeri giriniz :");
+        int exponent = scan.nextInt();
+        int result = 1;
+
+        for (int i = 1; i <= exponent; i++) {
+            result *= base;
+        }
+
+        System.out.println("Sonuç : " + result);
+    }
+
+    static void factorial() {
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Sayı giriniz :");
+        int n = scan.nextInt();
+        int result = 1;
+
+        for (int i = 1; i <= n; i++) {
+            result *= i;
+        }
+
+        System.out.println("Sonuç : " + result);
+    }
 
 
-:mag:
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        int select;
+        String menu = "1- Toplama İşlemi\n"
+                + "2- Çıkarma İşlemi\n"
+                + "3- Çarpma İşlemi\n"
+                + "4- Bölme işlemi\n"
+                + "5- Üslü Sayı Hesaplama\n"
+                + "6- Faktoriyel Hesaplama\n"
+                + "7- Mod Alma\n"
+                + "8- Dikdörtgen Alan ve Çevre Hesabı\n"
+                + "0- Çıkış Yap";
+
+        do {
+            System.out.println(menu);
+            System.out.print("Lütfen bir işlem seçiniz :");
+            select = scan.nextInt();
+            switch (select) {
+                case 1:
+                    plus();
+                    break;
+                case 2:
+                    minus();
+                    break;
+                case 3:
+                    times();
+                    break;
+                case 4:
+                    divided();
+                    break;
+                case 5:
+                    power();
+                    break;
+                case 6:
+                    factorial();
+                    break;
+                case 0:
+                    break;
+                default:
+                    System.out.println("Yanlış bir değer girdiniz, tekrar deneyiniz.");
+            }
+        } while (select != 0);
+    }
+}
+```
+:warning: Aynı projeye mod almak ve dikdörtgen alan çevre hesabını yapan metotları yazıp menüde işlevsel hale getiriniz.
+
 ### :green_square: CEVAP
 
 <details>
 <summary>Kodu görmek için tıklayınız.</summary>
 
 ```java
+import java.util.Scanner;
 
+public class GelismisHesapMakinesi {
+
+
+    static void topla() {
+        int sayi1, sayi2, sonuc;
+        Scanner input = new Scanner(System.in);
+        System.out.print("1.Sayıyı giriniz: ");
+        sayi1 = input.nextInt();
+        System.out.print("2.Sayıyı giriniz: ");
+        sayi2 = input.nextInt();
+
+        sonuc = sayi1 + sayi2;
+        System.out.println("SONUÇ: " + sonuc);
+    }
+
+    static void cikar() {
+        int sayi1, sayi2, sonuc;
+        Scanner input = new Scanner(System.in);
+        System.out.print("1.Sayıyı giriniz: ");
+        sayi1 = input.nextInt();
+        System.out.print("2.Sayıyı giriniz: ");
+        sayi2 = input.nextInt();
+
+        sonuc = sayi1 - sayi2;
+        System.out.println("SONUÇ: " + sonuc);
+    }
+
+    static void carp() {
+        int sayi1, sayi2, sonuc;
+        Scanner input = new Scanner(System.in);
+        System.out.print("1.Sayıyı giriniz: ");
+        sayi1 = input.nextInt();
+        System.out.print("2.Sayıyı giriniz: ");
+        sayi2 = input.nextInt();
+
+        sonuc = sayi1 * sayi2;
+        System.out.println("SONUÇ: " + sonuc);
+    }
+
+    static void bol() {
+        int sayi1, sayi2, sonuc;
+        Scanner input = new Scanner(System.in);
+        System.out.print("1.Sayıyı giriniz: ");
+        sayi1 = input.nextInt();
+        System.out.print("2.Sayıyı giriniz: ");
+        sayi2 = input.nextInt();
+
+        if (sayi2 == 0) {
+            System.out.println("Sıfıra bölünemez!!!");
+        } else {
+            sonuc = sayi1 / sayi2;
+            System.out.println("SONUÇ: " + sonuc);
+        }
+    }
+
+    static void usAl() {
+        int taban, us, sonuc = 1;
+        Scanner input = new Scanner(System.in);
+        System.out.print("Taban sayıyı giriniz: ");
+        taban = input.nextInt();
+        System.out.print("Üs sayıyı giriniz: ");
+        us = input.nextInt();
+
+        for (int x = 1; x <= us; x++) {
+            sonuc *= taban;
+        }
+        System.out.println("SONUÇ: " + sonuc);
+    }
+
+    static void faktoriyel() {
+        int sayi, sonuc = 1;
+        Scanner input = new Scanner(System.in);
+        System.out.print("Sayı giriniz: ");
+        sayi = input.nextInt();
+
+        for (int x = 1; x <= sayi; x++) {
+            sonuc *= x;
+        }
+
+        System.out.println("SONUÇ: " + sonuc);
+    }
+
+    static void mod() {
+        int sayi, mod, sonuc;
+        Scanner input = new Scanner(System.in);
+        System.out.print("Sayıyı giriniz: ");
+        sayi = input.nextInt();
+        System.out.print("Mod sayısını giriniz: ");
+        mod = input.nextInt();
+
+        sonuc=sayi%mod;
+        System.out.println("SONUÇ: " + sonuc);
+    }
+
+    static void alanVeCevre() {
+        int sayi1, sayi2, alan, cevre;
+        Scanner input = new Scanner(System.in);
+        System.out.print("1. Kenarı giriniz: ");
+        sayi1 = input.nextInt();
+        System.out.print("2. Kenarı giriniz: ");
+        sayi2 = input.nextInt();
+
+        alan=sayi1*sayi2;
+        cevre=2*(sayi1+sayi2);
+        System.out.println("ALAN: " + alan);
+        System.out.println("CEVRE: " + cevre);
+    }
+
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int islem;
+
+        while (true) {
+
+            System.out.println("""
+                    0- Programı Sonlandır
+                    1- Toplama İşlemi
+                    2- Çıkarma İşlemi
+                    3- Çarpma İşlemi
+                    4- Bölme işlemi
+                    5- Üslü Sayı Hesaplama
+                    6- Faktoriyel Hesaplama
+                    7- Mod Alma
+                    8- Dikdörtgen Alan ve Çevre Hesabı\n""");
+
+            System.out.print("Lütfen bir işlem seçiniz: ");
+            islem = input.nextByte();
+
+            if (islem == 0) {
+                break;
+            }
+
+            switch (islem) {
+                case 1:
+                    topla();
+                    break;
+
+                case 2:
+                    cikar();
+                    break;
+
+                case 3:
+                    carp();
+                    break;
+
+                case 4:
+                    bol();
+                    break;
+
+                case 5:
+                    usAl();
+                    break;
+
+                case 6:
+                    faktoriyel();
+                    break;
+
+                case 7:
+                    mod();
+                    break;
+
+                case 8:
+                    alanVeCevre();
+                    break;
+
+                default:
+                    System.out.println("Lütfen geçerli bir işlem numarası seçiniz!!!");
+            }
+        }
+
+        System.out.println("Hesap makinesi kapanıyor !!!");
+    }
+}
 ```
 </details>
 
