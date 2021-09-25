@@ -1721,15 +1721,46 @@ public class test {
 ## :brain: PRATİK 22 - Palindrom Sayılar
 
 ### :question: SORU 
+Java ile bir sayının "Palindrom Sayı" olup olmadığını bulan bir program yapıyoruz.
+
+:pill: Palindrom Sayı Nedir ?
+Palindromik sayı, iki taraftan okunduğu zaman okunuş yönüyle aynı olan sayılardır.
+Örnek: 1, 4, 8, 99, 101, 363, 4004, 9889....
 
 
-:mag:
 ### :green_square: CEVAP
 
 <details>
 <summary>Kodu görmek için tıklayınız.</summary>
 
 ```java
+import java.util.Scanner;
+
+public class test {
+
+    static boolean isPalindrom(int number){
+        int temp = number, reverseNumber=0, lastNumber;
+
+        while (temp!=0){
+            System.out.println("Number: " + temp);
+
+            lastNumber=temp%10;
+            System.out.println("Last Number: " +lastNumber);
+
+            reverseNumber=(reverseNumber*10)+lastNumber;
+            System.out.println("New Number: " +reverseNumber);
+
+            temp/=10;
+            System.out.println("New Temp: " +temp);
+        }
+        return true;
+    }
+
+    public static void main(String[] args) {
+        isPalindrom(2456);
+    }
+}
+
 
 ```
 </details>
@@ -2189,7 +2220,19 @@ public class test {
 ## :brain: ÖDEV 6 - Girilen Sayılardan Min ve Max Değerli Bulan Program
 
 ### :question: SORU 
+Java ile klavyeden girilen N tane sayma sayısından en büyük ve en küçük sayıları bulan ve bu sayıları ekrana yazan programı yazın.
 
+:mag: Senaryo:
+```
+Kaç tane sayı gireceksiniz: 4
+1. Sayıyı giriniz: 16
+2. Sayıyı giriniz: -22
+3. Sayıyı giriniz: -15
+4. Sayıyı giriniz: 100
+En büyük sayı: 100
+En küçük sayı: -22
+
+```
 
 ### :green_square: CEVAP
 
@@ -2197,6 +2240,40 @@ public class test {
 <summary>Kodu görmek için tıklayınız.</summary>
 
 ```java
+import java.util.Scanner;
+
+public class test {
+    public static void main(String[] args) {
+        int sayiN, sayi, buyukSay = 0, kucukSay = 0;
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Kaç tane sayı gireceksiniz: ");
+        sayiN = input.nextInt();
+
+        for (int x = 1; x <= sayiN; x++) {
+            System.out.print(x + ". Sayıyı giriniz: ");
+            sayi = input.nextInt();
+
+
+            if (sayi > buyukSay) {
+                if (kucukSay == 0) {
+                    kucukSay = sayi;
+                }
+                buyukSay = sayi;
+            }
+
+            if (sayi < kucukSay) {
+                if (buyukSay == 0) {
+                    buyukSay = sayi;
+                }
+                kucukSay = sayi;
+            }
+        }
+        System.out.println("En büyük sayı: " + buyukSay);
+        System.out.println("En küçük sayı: " + kucukSay);
+    }
+}
+
 
 ```
 </details>
@@ -2205,7 +2282,20 @@ public class test {
 ## :brain: ÖDEV 7 - Mükemmel Sayı Bulan Program
 
 ### :question: SORU 
+Klavyeden girilen bir sayının mükemmel sayı olup/olmadığını bulan ve sayı mükemmel sayı ise ekrana “mükemmel sayıdır.” değilse “mükemmel sayı değildir.” ifadelerini ekrana yazan programı Java dilinde yazınız.
 
+:pill: Mükemmel Sayı Nedir ?
+Bir sayının kendisi hariç pozitif tam sayı çarpanları (kalansız bölen sayıların) toplamı kendisine eşit olan sayıya mükemmel sayı denir.
+
+:mag: Senaryo
+```
+Bir sayı giriniz: 28
+28 Mükemmel sayıdır
+Bir sayı giriniz: 1
+1 Mükemmel sayı değildir.
+Bir sayı giriniz: 496
+496 Mükemmel sayıdır
+```
 
 ### :green_square: CEVAP
 
@@ -2213,6 +2303,30 @@ public class test {
 <summary>Kodu görmek için tıklayınız.</summary>
 
 ```java
+import java.util.Scanner;
+
+public class MukemmelSayiBulanProgram {
+    public static void main(String[] args) {
+        int sayi, sonuc = 0;
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Bir sayı giriniz: ");
+        sayi = input.nextInt();
+
+        for (int x = 1; x < sayi; x++) {
+            if (sayi % x == 0) {
+
+                sonuc += x;
+            }
+        }
+
+        if (sayi == sonuc) {
+            System.out.print(sayi + " Mükemmel sayıdır.");
+        } else {
+            System.out.print(sayi + " Mükemmel sayı değildir.");
+        }
+    }
+}
 
 ```
 </details>
@@ -2221,6 +2335,23 @@ public class test {
 ## :brain: ÖDEV 8 - Ters Üçgen Yapımı
 
 ### :question: SORU 
+Java ile basamak sayısının kullanıcıdan alınan ve döngüler kullanılarak, yıldızlar(*) ile ekrana ters üçgen çizen programı yazın.
+
+:pill: Örnek
+Basamak Sayısı : 10
+
+```
+ *******************
+  *****************
+   ***************
+    *************
+     ***********
+      *********
+       *******
+        *****
+         ***
+          *
+```
 
 
 ### :green_square: CEVAP
@@ -2229,6 +2360,29 @@ public class test {
 <summary>Kodu görmek için tıklayınız.</summary>
 
 ```java
+import java.util.Scanner;
+
+public class TersUcgenYapimi {
+    public static void main(String[] args) {
+        int basamak;
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Basamak sayısını giriniz: ");
+        basamak = input.nextInt();
+
+        for (int x = 1; x <= basamak; x++) {
+
+            for (int y = 1; y < x; y++) {
+                System.out.print(" ");
+            }
+
+            for (int z = 0; z <= ((2 * basamak) - (2 * x)); z++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+}
 
 ```
 </details>
@@ -2237,14 +2391,39 @@ public class test {
 ## :brain: ÖDEV 9 - 1-100 Arasındaki Asal Sayıları Bulan Program
 
 ### :question: SORU 
+Java ile 1 - 100 arasındaki asal sayıları ekrana yazdıran programı yazınız.
 
-
+:mag: Senaryo
+```
+2 3 5 7 11 13 17 19 23 29 31 37 41 43 47 53 59 61 67 71 73 79 83 89 97 
+```
 ### :green_square: CEVAP
 
 <details>
 <summary>Kodu görmek için tıklayınız.</summary>
 
 ```java
+public class AsalSayilariBulanProgram {
+    public static void main(String[] args) {
+        int sayac1 = 0;
+
+        for (int x = 1; x <= 100; x++) {
+
+            for (int y = 1; y <= x; y++) {
+                if (x % y == 0) {
+                    sayac1++;
+                }
+            }
+
+            if (sayac1 == 2) {
+                System.out.print(x + " ");
+                sayac1 = 0;
+            } else {
+                sayac1 = 0;
+            }
+        }
+    }
+}
 
 ```
 </details>
@@ -2253,7 +2432,31 @@ public class test {
 ## :brain: ÖDEV 10 - Fibonacci Serisi
 
 ### :question: SORU 
+Java döngüler ile fibonacci serisi bulan program yazıyoruz. Fibonacci serisinin eleman sayısını kullanıcıdan alın.
 
+:pill: Fibonacci Serisi Nedir ?
+Fibonacci serisi, her sayının kendinden önceki ile toplanması sonucu oluşan bir sayı dizisidir. Bu şekilde devam eden bu dizide sayılar birbirleriyle oranlandığında altın oran ortaya çıkar, yani bir sayı kendisinden önceki sayıya bölündüğünde altın orana gittikçe yaklaşan bir dizi elde edilir.
+
+Fibonacci dizisi, 0'dan başlar ve sonsuza kadar. Her rakam, bir önceki rakamla toplanır. Elde edilen sonuç rakamın sağ tarafına yazılır. Fibonacci dizisinin ilk on sayısı şu şekildedir:
+
+9 Elemanlı Fibonacci Serisi : 0 1 1 2 3 5 8 13 21 34
+```
+0 + 1 = 1
+
+1 + 1 = 2
+
+1 + 2 = 3
+
+2 + 3 = 5
+
+3 + 5 = 8
+
+5 + 8 = 13
+
+13 + 8 = 21
+
+21 + 8 = 34
+```
 
 ### :green_square: CEVAP
 
@@ -2261,6 +2464,28 @@ public class test {
 <summary>Kodu görmek için tıklayınız.</summary>
 
 ```java
+import java.util.Scanner;
+
+public class FibonacciSerisi {
+    public static void main(String[] args) {
+        int elemanSay, sayi1= 0, sayi2=1, toplam=0;
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Fibonacci serisinin eleman sayısını giriniz: ");
+        elemanSay = input.nextInt();
+
+        System.out.print(sayi1+" "+sayi2);
+
+        for (int x = 2; x <= elemanSay; x++) {
+
+            toplam=sayi1+sayi2;
+            System.out.print(" "+toplam);
+
+            sayi1=sayi2;
+            sayi2=toplam;
+        }
+    }
+}
 
 ```
 </details>
