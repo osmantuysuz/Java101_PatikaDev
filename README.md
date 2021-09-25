@@ -33,8 +33,7 @@ Bu README dosyasında bu eğitimdeki pratik ve ödevlerin cevaplarını bulacaks
 | [PRATİK 24]() - Gelişmiş Hesap Makinesi |
 | [PRATİK 25]() - Öğrenci Bilgi Sistemi |
 | [PRATİK 26]() - Boks Oyunu |
---------------------------------------------------------------------------------------------------------------------------------------
-
+------------------------------------------------------------------------------------------------------------------------------------
 ## :brain: PRATİK 1 - Not Ortalaması
 
 ### :question: SORU 
