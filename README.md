@@ -25,7 +25,7 @@ Bu README dosyasında bu eğitimdeki pratik ve ödevlerin cevaplarını bulacaks
 | [PRATİK 16](https://github.com/osmantuysuz/Java101_PatikaDev#brain-prati̇k-16---üslü-sayı-hesaplayan-program) - Üslü Sayı Hesaplayan Program |
 | [PRATİK 17](https://github.com/osmantuysuz/Java101_PatikaDev#brain-prati̇k-17---armstrong-sayıları-bulan-program) - Armstrong Sayıları Bulan Program |
 | [PRATİK 18](https://github.com/osmantuysuz/Java101_PatikaDev#brain-prati̇k-18---harmonik-sayıları-bulan-program) - Harmonik Sayıları Bulan Program |
-| [PRATİK 19]() - Yıldız ile Üçgen Yapımı |
+| [PRATİK 19](https://github.com/osmantuysuz/Java101_PatikaDev#brain-prati̇k-19---yıldız-ile-üçgen-yapımı) - Yıldız ile Üçgen Yapımı |
 | [PRATİK 20]() - ATM Projesi |
 | [PRATİK 21]() - EBOB ve EKOK Bulan Program |
 | [PRATİK 22]() - Palindrom Sayılar |
