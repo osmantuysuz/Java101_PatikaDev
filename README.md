@@ -22,8 +22,8 @@ Bu README dosyasında bu eğitimdeki pratik ve ödevlerin cevaplarını bulacaks
 | [PRATİK 13](https://github.com/osmantuysuz/Java101_PatikaDev#brain-prati̇k-13---tek-sayıların-toplamını-bulan-program) - Tek Sayıların Toplamını Bulan Program | [ÖDEV 13](https://github.com/osmantuysuz/Java101_PatikaDev#brain-ödev-13---desene-göre-metot-oluşturma-recursive-metot) - Desene Göre Metot Oluşturma (Recursive Metot) |
 | [PRATİK 14](https://github.com/osmantuysuz/Java101_PatikaDev#brain-prati̇k-14---girilen-sayıdan-küçük-2nin-kuvvetlerini-bulan-program) - Girilen Sayıdan Küçük 2'nin Kuvvetlerini Bulan Program | [ÖDEV 14](https://github.com/osmantuysuz/Java101_PatikaDev#brain-ödev-14---maaş-hesaplayıcı) - Maaş Hesaplayıcı |
 | [PRATİK 15](https://github.com/osmantuysuz/Java101_PatikaDev#brain-prati̇k-15---faktöriyel-hesaplayan-program) - Faktöriyel Hesaplayan Program | [ÖDEV 15](https://github.com/osmantuysuz/Java101_PatikaDev#brain-ödev-15---diziyi-küçükten-büyüğe-sıralama) - Diziyi Küçükten Büyüğe Sıralama |
-| [PRATİK 16](https://github.com/osmantuysuz/Java101_PatikaDev#brain-prati̇k-16---üslü-sayı-hesaplayan-program) - Üslü Sayı Hesaplayan Program | [ÖDEV 16]() - Dizideki Elemanların Frekansı |
-| [PRATİK 17](https://github.com/osmantuysuz/Java101_PatikaDev#brain-prati̇k-17---armstrong-sayıları-bulan-program) - Armstrong Sayıları Bulan Program | [ÖDEV 17]() - Matris Transpozunu Bulma |
+| [PRATİK 16](https://github.com/osmantuysuz/Java101_PatikaDev#brain-prati̇k-16---üslü-sayı-hesaplayan-program) - Üslü Sayı Hesaplayan Program | [ÖDEV 16](https://github.com/osmantuysuz/Java101_PatikaDev#brain-ödev-16---dizideki-elemanların-frekansı) - Dizideki Elemanların Frekansı |
+| [PRATİK 17](https://github.com/osmantuysuz/Java101_PatikaDev#brain-prati̇k-17---armstrong-sayıları-bulan-program) - Armstrong Sayıları Bulan Program | [ÖDEV 17](https://github.com/osmantuysuz/Java101_PatikaDev#brain-ödev-17---matris-transpozunu-bulma) - Matris Transpozunu Bulma |
 | [PRATİK 18](https://github.com/osmantuysuz/Java101_PatikaDev#brain-prati̇k-18---harmonik-sayıları-bulan-program) - Harmonik Sayıları Bulan Program |
 | [PRATİK 19](https://github.com/osmantuysuz/Java101_PatikaDev#brain-prati̇k-19---yıldız-ile-üçgen-yapımı) - Yıldız ile Üçgen Yapımı |
 | [PRATİK 20](https://github.com/osmantuysuz/Java101_PatikaDev#brain-prati̇k-20---atm-projesi) - ATM Projesi |
@@ -3700,7 +3700,34 @@ Tekrar Sayıları
 <summary>Kodu görmek için tıklayınız.</summary>
 
 ```java
+import java.sql.Array;
+import java.util.Arrays;
+import java.util.Scanner;
 
+public class test {
+    public static void main(String[] args) {
+        int[] list = {10, 20, 20, 10, 10, 20, 5, 20};
+        int counter = 0;
+
+        for (int i = 0; i < list.length; i++) {
+            for (int j = 0; j < list.length; j++) {
+                if (list[i] == list[j]) {
+                    for (int k = 0; k < i; k++) {
+                        if (list[k] == list[i]) {
+                            counter = -1;
+                        }
+                    }
+                    counter++;
+                }
+            }
+
+            if (counter != 0) {
+                System.out.printf("%s sayısı %s kere tekrar edildi.\n", list[i], counter);
+            }
+            counter = 0;
+        }
+    }
+}
 ```
 
 </details>
@@ -3747,7 +3774,37 @@ Transpoze :
 <summary>Kodu görmek için tıklayınız.</summary>
 
 ```java
+import java.sql.Array;
+import java.util.Arrays;
+import java.util.Scanner;
 
+public class test {
+    public static void main(String[] args) {
+        int[][] matris = {{2, 3, 4}, {5, 6, 4}, {7, 8, 9}, {9, 8, 7}};
+        int[][] transpose = new int[matris[0].length][matris.length];
+
+        for (int row = 0; row < transpose.length; row++) {
+            for (int col = 0; col < transpose[row].length; col++) {
+                transpose[row][col] = matris[col][row];
+            }
+        }
+
+        System.out.println("Matris :");
+        for (int[] row : matris) {
+            for (int col : row) {
+                System.out.print(col + "    ");
+            }
+            System.out.println();
+        }
+        System.out.println("Transpoze :");
+        for (int[] row : transpose) {
+            for (int col : row) {
+                System.out.print(col + "    ");
+            }
+            System.out.println();
+        }
+    }
+}
 ```
 
 </details>
