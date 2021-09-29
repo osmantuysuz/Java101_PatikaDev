@@ -37,6 +37,8 @@ Bu README dosyasında bu eğitimdeki pratik ve ödevlerin cevaplarını bulacaks
 | [PRATİK 28](https://github.com/osmantuysuz/Java101_PatikaDev#brain-prati̇k-28---dizideki-maksimum-ve-minimum-değerleri-bulan-program) - Dizideki Maksimum ve Minimum Değerleri Bulan Program |
 | [PRATİK 29](https://github.com/osmantuysuz/Java101_PatikaDev#brain-prati̇k-29---çok-boyutlu-diziler-ile-a-harfi-yazdıran-program) - Çok Boyutlu Diziler ile A Harfi Yazdıran Program |
 | [PRATİK 30](https://github.com/osmantuysuz/Java101_PatikaDev#brain-prati̇k-30---dizideki-tekrar-eden-sayıları-bulan-program) - Dizideki Tekrar Eden Sayıları Bulan Program |
+| [PRATİK 31]() - Sayı Tahmin Oyunu |
+| [PRATİK 32]() - Palindromik Kelimeleri Bulan Program |
 ------------------------------------------------------------------------------------------------------------------------------------
 ## :brain: PRATİK 1 - Not Ortalaması
 
@@ -2619,6 +2621,99 @@ public class test {
 </details>
 
 ------------------------------------------------------------------------------------------------------------------------------------
+## :brain: PRATİK 31 - Sayı Tahmin Oyunu
+
+### :question: SORU 
+Java dilinde programın 0-100 arasında rastgele seçtiği bir sayıyı kullanıcının tahmin etmesini istediğimiz bir "Sayı Tahmin Oyunu" yapıyoruz.
+
+### :green_square: CEVAP
+
+<details>
+<summary>Kodu görmek için tıklayınız.</summary>
+
+```java
+import java.util.Arrays;
+import java.util.Random;
+import java.util.Scanner;
+
+public class test {
+    public static void main(String[] args) {
+        Random rand = new Random();
+        int number = rand.nextInt(100);
+        //int number = (int) (Math.random() * 100);
+
+        Scanner input = new Scanner(System.in);
+        int right = 0;
+        int selected;
+        int[] wrong = new int[5];
+        boolean isWin = false;
+        boolean isWrong = false;
+
+        System.out.println(number);
+        while (right < 5) {
+            System.out.print("Lütfen tahmininizi giriniz : ");
+            selected = input.nextInt();
+
+            if (selected < 0 || selected > 99) {
+                System.out.println("Lütfen 0-100 arasında bir değer giriniz.");
+                if (isWrong) {
+                    right++;
+                    System.out.println("Çok fazla hatalı giriş yaptınız. Kalan hak : " + (5 - right));
+                } else {
+                    isWrong = true;
+                    System.out.println("Bir daha hatalı girişinizde hakkınızdan düşülecektir.");
+                }
+                continue;
+            }
+
+            if (selected == number) {
+                System.out.println("Tebrikler, doğru tahmin ! Tahmin ettiğini sayı : " + number);
+                isWin = true;
+                break;
+            } else {
+                System.out.println("Hatalı bir sayı girdiniz !");
+                if (selected > number) {
+                    System.out.println(selected + " sayısı, gizli sayıdan büyüktür.");
+                } else {
+                    System.out.println(selected + " sayısı, gizli sayıdan küçüktür.");
+                }
+
+                wrong[right++] = selected;
+                System.out.println("Kalan hakkı : " + (5 - right));
+            }
+        }
+
+        if (!isWin) {
+            System.out.println("Kaybettiniz ! ");
+            if (!isWrong) {
+                System.out.println("Tahminleriniz : " + Arrays.toString(wrong));
+            }
+        }
+
+    }
+}
+
+```
+</details>
+
+------------------------------------------------------------------------------------------------------------------------------------
+## :brain: PRATİK 32 - Palindromik Kelimleri Bulan Program
+
+### :question: SORU 
+Bir dizide tekrar eden sayıları bulalım.
+
+### :green_square: CEVAP
+
+<details>
+<summary>Kodu görmek için tıklayınız.</summary>
+
+```java
+
+```
+</details>
+
+------------------------------------------------------------------------------------------------------------------------------------
+
 
 
 ## :brain: ÖDEV 1 - Vücut Kitle İndeksi Hesaplama
