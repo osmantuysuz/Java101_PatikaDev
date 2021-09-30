@@ -37,8 +37,8 @@ Bu README dosyasında bu eğitimdeki pratik ve ödevlerin cevaplarını bulacaks
 | [PRATİK 28](https://github.com/osmantuysuz/Java101_PatikaDev#brain-prati̇k-28---dizideki-maksimum-ve-minimum-değerleri-bulan-program) - Dizideki Maksimum ve Minimum Değerleri Bulan Program |
 | [PRATİK 29](https://github.com/osmantuysuz/Java101_PatikaDev#brain-prati̇k-29---çok-boyutlu-diziler-ile-a-harfi-yazdıran-program) - Çok Boyutlu Diziler ile A Harfi Yazdıran Program |
 | [PRATİK 30](https://github.com/osmantuysuz/Java101_PatikaDev#brain-prati̇k-30---dizideki-tekrar-eden-sayıları-bulan-program) - Dizideki Tekrar Eden Sayıları Bulan Program |
-| [PRATİK 31]() - Sayı Tahmin Oyunu |
-| [PRATİK 32]() - Palindromik Kelimeleri Bulan Program |
+| [PRATİK 31](https://github.com/osmantuysuz/Java101_PatikaDev#brain-prati̇k-31---sayı-tahmin-oyunu) - Sayı Tahmin Oyunu |
+| [PRATİK 32](https://github.com/osmantuysuz/Java101_PatikaDev#brain-prati̇k-32---palindromik-kelimleri-bulan-program) - Palindromik Kelimeleri Bulan Program |
 ------------------------------------------------------------------------------------------------------------------------------------
 ## :brain: PRATİK 1 - Not Ortalaması
 
@@ -2700,7 +2700,11 @@ public class test {
 ## :brain: PRATİK 32 - Palindromik Kelimleri Bulan Program
 
 ### :question: SORU 
-Bir dizide tekrar eden sayıları bulalım.
+Java dilinde kullanıcının girdiği kelimenin "Palindromik" olup olmadığı bulan bir program yazıyoruz.
+
+Eğer bir kelimenin tersten okunuşu yine aynı kelimeyi veriyorsa o kelime "Palindromik Kelime'dir".
+
+:pill: Örnek: abba , asa , kavak, kayak
 
 ### :green_square: CEVAP
 
@@ -2708,7 +2712,55 @@ Bir dizide tekrar eden sayıları bulalım.
 <summary>Kodu görmek için tıklayınız.</summary>
 
 ```java
+import java.util.Scanner;
 
+public class test {
+
+    //1. Çözüm: String içinde gezerek harfleri karşılaştırma
+    static boolean isPalindrom(String str){
+        int i=0, j=str.length()-1;
+        while (i<j){
+            if (str.charAt(i) != str.charAt(j)){
+                return false;
+            }
+            i++;
+            j--;
+        }
+        return true;
+    }
+
+    //2. Çözüm: Gelen kelimeyi ters çevirip ilk haliyle karşılaştırma
+    static boolean isPalindrom2(String str){
+        String reverse="";
+        for (int i=str.length()-1; i>=0; i--){
+            reverse=reverse+str.charAt(i);
+        }
+
+        if (str.equals(reverse))
+            return true;
+        else
+            return false;
+    }
+
+    public static void main(String[] args) {
+        String kelime;
+        Scanner input = new Scanner(System.in);
+        System.out.print("Lütfen kelimeyi giriniz: ");
+        kelime=input.nextLine();
+
+        System.out.println("1. Çözüme Göre: ");
+        if (isPalindrom(kelime)==true)
+            System.out.println("Girilen " + kelime + " kelimesi palindromdur.");
+        else
+            System.out.println("Girilen " + kelime + " kelimesi palindrom değildir.");
+
+        System.out.println("2. Çözüme Göre: ");
+        if (isPalindrom2(kelime)==true)
+            System.out.println("Girilen " + kelime + " kelimesi palindromdur.");
+        else
+            System.out.println("Girilen " + kelime + " kelimesi palindrom değildir.");
+    }
+}
 ```
 </details>
 
